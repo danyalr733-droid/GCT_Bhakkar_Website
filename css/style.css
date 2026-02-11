@@ -3,10 +3,10 @@
   /* Colors - Light */
   --bg-body-light: #f8f9fb;
   --bg-surface-light: #f0f2f5;
-  --text-primary-light: #111827;
-  --text-muted-light: #4b5563;
-  --accent-light: #0056b3;
-  --accent-rgb-light: 0, 86, 179;
+  --text-primary-light: #0f172a; /* Slightly deeper than #111827 */
+  --text-muted-light: #334155; /* Deeper gray for accessibility */
+  --accent-light: #004696; /* Darker blue for light theme */
+  --accent-rgb-light: 0, 70, 150;
   --border-light: rgba(0, 0, 0, 0.12);
 
   /* Colors - Dark */
@@ -20,7 +20,7 @@
 
   /* --- RESPONSIVE TOKENS --- */
   --root-font-size: 16.5px;
-  --section-padding: clamp(60px, 10vw, 120px);
+  --section-padding: clamp(40px, 6vw, 80px);
   --container-width: 90%;
 
   /* Responsive Spacing Scale */
@@ -558,10 +558,15 @@ h4,
   margin-bottom: var(--space-md);
 }
 .text-gradient {
-  background: linear-gradient(90deg, #fff 0%, #a2c2e1 100%);
+  background: linear-gradient(90deg, var(--accent) 0%, #a2c2e1 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+[data-theme="dark"] .text-gradient {
+  background: linear-gradient(90deg, #fff 0%, #a2c2e1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 .hero-subtitle {
   font-size: var(--h3-size);
@@ -572,33 +577,30 @@ h4,
   font-weight: 400;
 }
 .btn-glass-large {
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  background: rgba(var(--accent-rgb), 0.05);
   backdrop-filter: blur(10px);
   padding: 12px 32px;
   border-radius: 50px;
-  text-decoration: none;
   font-weight: 600;
-  transition: all 0.5s var(--ease-out-expo);
+  transition: all 0.4s var(--ease-out-expo);
   display: inline-flex;
   align-items: center;
-  justify-content: center;
   gap: 10px;
-  height: 54px;
-  min-width: 220px; /* Match btn-premium-cta */
-  will-change: transform, box-shadow;
-  backface-visibility: hidden;
-  transform: translateZ(0);
 }
+
 .btn-glass-large:hover {
+  background: var(--accent);
+  color: white !important;
+  transform: scale(1.05) translateZ(0);
+  box-shadow: 0 15px 30px rgba(var(--accent-rgb), 0.2);
+}
+
+[data-theme="dark"] .btn-glass-large:hover {
   background: white;
   color: black !important;
-  transform: scale(1.01) translateZ(0);
   box-shadow: 0 15px 30px rgba(255, 255, 255, 0.15);
-}
-[data-theme="dark"] .btn-glass-large {
-  background: rgba(255, 255, 255, 0.05);
 }
 
 /* --- SECTIONS & CARDS --- */
@@ -620,11 +622,14 @@ h4,
   font-size: var(--small-size);
   margin-bottom: var(--space-sm);
   text-transform: uppercase;
+  text-align: center;
+  display: block;
 }
 .section-heading {
   font-size: var(--h2-size);
   letter-spacing: -2px;
   margin-bottom: var(--space-lg);
+  text-align: center;
 }
 
 /* Facilities / Programs */

@@ -14,9 +14,9 @@
 }
 
 [data-theme="light"] {
-    --glass-card-bg: rgba(255, 255, 255, 0.85); /* More opaque for text clarity */
-    --glass-card-border: rgba(0, 0, 0, 0.15);
-    --glass-highlight: rgba(0, 0, 0, 0.04);
+    --glass-card-bg: rgba(255, 255, 255, 0.95); /* Nearly opaque for perfect contrast */
+    --glass-card-border: rgba(0, 0, 0, 0.1);
+    --glass-highlight: rgba(15, 23, 42, 0.03);
 }
 
 /* Page Background Enhancement */
@@ -232,6 +232,7 @@
     margin: 0 0 2rem;
     font-size: 0.95rem;
     color: var(--text-muted);
+    font-weight: 500; /* Increased weight for readability */
 }
 
 .dev-bio li {
@@ -291,9 +292,10 @@
 .dev-footer-tag {
     text-align: center;
     padding: 40px 0;
-    opacity: 0.6;
+    opacity: 0.8; /* Increased opacity from 0.6 */
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: 600; /* Increased weight */
+    color: var(--text-muted);
 }
 
 /* Responsiveness */
