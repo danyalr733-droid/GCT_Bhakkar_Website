@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aetherius University - A premier institution dedicated to expanding the boundaries of human knowledge and innovation.">
+    <title>GCT BHAKKAR</title>
+    <!-- Bootstrap 5 -->
+    <link href="css/bootstrapCss/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚛️</text></svg>">
+</head>
+
+<body>
+
+    <!-- Loading Overlay -->
+    <div id="loader" class="loader-overlay" aria-hidden="true">
+        <div class="loader-content">
+            <div class="loader-logo">GCT BKR</div>
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top premium-nav">
+            <div class="container-fluid px-lg-5">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="#" aria-label="Aetherius University Home">
+                    <div class="brand-icon"><i class="fa-solid fa-atom"></i></div>
+                    <div class="brand-text">
+                        <span class="block fw-bold display-font">GCT</span>
+                        <span class="block small text-spaced">BHAKKAR</span>
+                    </div>
+                </a>
+
+                <button class="menu-trigger d-lg-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#premiumOffcanvas" aria-controls="premiumOffcanvas" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <div class="collapse navbar-collapse d-none d-lg-block">
+                    <ul class="navbar-nav mx-auto align-items-center bg-glass-pill">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/academics.html">Academics</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/facilities.html">Facilities</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/news.html">News</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/events.html">Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/contact.html">Contact</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-4">
+                        <!-- Theme Toggle -->
+                        <button class="theme-switch-wrapper" aria-label="Toggle Dark Mode">
+                            <div class="toggle-track">
+                                <div class="toggle-indicator"></div>
+                                <div class="icon-container-sun">
+                                    <i class="fa-solid fa-sun sun-icon"></i>
+                                </div>
+                                <div class="icon-container-moon">
+                                    <i class="fa-solid fa-moon moon-icon"></i>
+                                </div>
+                            </div>
+                        </button>
+                        <!-- CTA -->
+                        <a href="#apply" class="btn-premium-cta">
+                            <i class="fa-solid fa-paper-plane me-1"></i>
+                            <span>Apply Now</span>
+                            <div class="btn-shine"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end premium-menu-glass" tabindex="-1" id="premiumOffcanvas"
+        aria-labelledby="offcanvasLabel">
+        <div class="offcanvas-bg-glow"></div>
+        <div class="offcanvas-header justify-content-between align-items-center p-4">
+            <div class="brand-group text-white">
+                <i class="fa-solid fa-atom fs-2"></i>
+                <span class="fw-bold fs-3 ms-2 font-serif" id="offcanvasLabel">Gct Bhakkar</span>
+            </div>
+            <button type="button" class="btn-close-custom" data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-center px-5">
+            <ul class="premium-menu-list">
+                <li class="menu-item-reveal"><a href="index.html" class="menu-link" data-text="Home">Home</a></li>
+                <li class="menu-item-reveal"><a href="pages/about.html" class="menu-link" data-text="About">About</a>
+                </li>
+                <li class="menu-item-reveal"><a href="pages/academics.html" class="menu-link"
+                        data-text="Academics">Academics</a></li>
+                <li class="menu-item-reveal"><a href="pages/facilities.html" class="menu-link"
+                        data-text="Facilities">Facilities</a></li>
+                <li class="menu-item-reveal"><a href="pages/news.html" class="menu-link" data-text="News">News</a></li>
+                <li class="menu-item-reveal"><a href="pages/events.html" class="menu-link" data-text="Events">Events</a>
+                </li>
+                <li class="menu-item-reveal"><a href="pages/developers.html" class="menu-link"
+                        data-text="Developers">Developers</a></li>
+                <li class="menu-item-reveal"><a href="pages/contact.html" class="menu-link"
+                        data-text="Contact">Contact</a>
+                </li>
+            </ul>
+
+            <div class="menu-footer mt-5 pt-4 border-top border-white-10 d-flex flex-column gap-3 menu-item-reveal">
+                <div class="d-flex justify-content-between align-items-center mb-2 px-1">
+                    <span class="text-white-50 small text-uppercase fw-bold letter-spacing-1">Theme Preference</span>
+                    <button class="theme-switch-wrapper mobile-theme-switch" aria-label="Toggle Dark Mode Mobile">
+                        <div class="toggle-track">
+                            <div class="toggle-indicator"></div>
+                            <div class="icon-container-sun">
+                                <i class="fa-solid fa-sun sun-icon"></i>
+                            </div>
+                            <div class="icon-container-moon">
+                                <i class="fa-solid fa-moon moon-icon"></i>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+                <a href="#apply" class="btn-premium-cta w-100 justify-content-center mt-3">Start Application</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- 1. Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-slideshow">
+                <div class="slide active" style="background-image: url('assets/img/colage front active.jpeg');">
+                </div>
+                <div class="slide" role="img" aria-label="Campus Building"
+                    style="background-image: url('assets/img/phol.jpeg');">
+                </div>
+                <div class="slide" role="img" aria-label="Library Interior"
+                    style="background-image: url('assets/img/front 3.jpeg');">
+                </div>
+                <div class="slide" role="img" aria-label="Library Interior"
+                    style="background-image: url('assets/img/colage watsap .jpg');">
+                </div>
+            </div>
+            <div class="hero-overlay-gradient"></div>
+            <div
+                class="container position-relative z-2 h-100 d-flex flex-column justify-content-center align-items-start">
+                <div class="overflow-hidden mb-2">
+                    <span class="hero-badge animate-text">EST. 2008 &bull; Dev by TEVTA institute.</span>
+                </div>
+                <div class="overflow-hidden">
+                    <h1 class="hero-title animate-text delay-1">Government Collage of <br> <span
+                            class="text-gradient">Technology.</span></h1>
+                </div>
+                <div class="overflow-hidden mb-5">
+                    <p class="hero-subtitle animate-text delay-2">Ideally positioned at the intersection of technology,
+                        humanity, and innovation.</p>
+                </div>
+                <div class="cta-wrapper animate-text delay-3 d-flex flex-wrap gap-3">
+                    <a href="#programs" class="btn-glass-large">Explore Programs</a>
+                    <a href="#apply" class="btn-premium-cta large-cta">
+                        <i class="fa-solid fa-paper-plane me-1"></i>
+                        <span>Start Application</span>
+                        <div class="btn-shine"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="scroll-indicator" aria-hidden="true">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span>Scroll</span>
+            </div>
+        </section>
+
+        <!-- 2. Introduction Section -->
+        <section id="about" class="section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 text-center reveal-up">
+                        <h5 class="section-tag">WELCOME TO GCT BHAKKAR</h5>
+                        <h2 class="section-heading display-4 mb-4">A Legacy of <span
+                                class="serif-italic">Excellence</span></h2>
+                        <p class="lead text-muted mx-auto" style="max-width: 800px;">
+                            We are a premier institution dedicated to expanding the boundaries of human knowledge. From
+                            our humble beginnings to our status as a global research hub, Aetherius University defines
+                            what's possible for the next generation of leaders.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New: Why Choose Us -->
+        <section class="section-padding bg-paper">
+            <div class="container">
+                <div class="text-center mb-5 reveal-up">
+                    <h5 class="section-tag">WHY CHOOSE US</h5>
+                    <h2 class="section-heading">The GCT Advantage</h2>
+                </div>
+                <div class="programs-grid">
+                    <div class="feature-box tilt-card contact-box-premium reveal-up">
+                        <div class="feature-icon"><i class="fa-solid fa-trophy"></i></div>
+                        <h4>Top 1% Global Ranking</h4>
+                        <p class="text-muted">Consistent excellence recognized by international educational bodies and
+                            industry leaders.</p>
+                    </div>
+                    <div class="feature-box tilt-card contact-box-premium reveal-up">
+                        <div class="feature-icon"><i class="fa-solid fa-users-viewfinder"></i></div>
+                        <h4>1:8 Faculty Ratio</h4>
+                        <p class="text-muted">Personalized mentorship from world-class professors who know your name and
+                            your goals.</p>
+                    </div>
+                    <div class="feature-box tilt-card contact-box-premium reveal-up">
+                        <div class="feature-icon"><i class="fa-solid fa-rocket"></i></div>
+                        <h4>Innovation Hub</h4>
+                        <p class="text-muted">Access to multi-million dollar labs and immediate seed funding for student
+                            startups.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Programs Section / Our Facilities -->
+        <section id="programs" class="section-padding bg-paper">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-end mb-5 reveal-up">
+                    <div>
+                        <h5 class="section-tag">ACADEMIC EXCELLENCE</h5>
+                        <h2 class="section-heading">Our PROGRAMS</h2>
+                    </div>
+                    <div class="d-none d-lg-block">
+                        <a href="#" class="btn-link-arrow">View All Facilities <i
+                                class="fa-solid fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+
+                <div class="programs-grid">
+                    <!-- 1. Electrical -->
+                    <div class="program-card tilt-card contact-box-premium reveal-up">
+                        <img src="assets/img/electrical.jpeg" loading="lazy" alt="Electrical Lab">
+                        <div class="card-content">
+                            <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
+                            <h3>Electrical Engineering</h3>
+                            <p>Sustainable energy, power grids, and advanced circuit systems.</p>
+                            <a href="#" class="learn-link">Learn More <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </div>
+                    <!-- 2. Mechanical -->
+                    <div class="program-card tilt-card contact-box-premium reveal-up">
+                        <img src="assets/img/mechanical.jpeg" loading="lazy" alt="Mechanical Workshop">
+                        <div class="card-content">
+                            <div class="icon-box"><i class="fa-solid fa-gear"></i></div>
+                            <h3>Mechanical Engineering</h3>
+                            <p>Robotics, aerospace, and next-gen manufacturing.</p>
+                            <a href="#" class="learn-link">Learn More <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </div>
+                    <!-- 3. Civil -->
+                    <div class="program-card tilt-card contact-box-premium reveal-up">
+                        <img src="assets/img/civil.jpeg" loading="lazy" alt="Civil Construction">
+                        <div class="card-content">
+                            <div class="icon-box"><i class="fa-solid fa-city"></i></div>
+                            <h3>Civil Engineering</h3>
+                            <p>Resilient infrastructure and smart city planning.</p>
+                            <a href="#" class="learn-link">Learn More <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </div>
+                    <!-- 4. Electronics -->
+                    <div class="program-card tilt-card contact-box-premium reveal-up">
+                        <img src="assets/img/electronics.png" loading="lazy" alt="Electronics Chip">
+                        <div class="card-content">
+                            <div class="icon-box"><i class="fa-solid fa-microchip"></i></div>
+                            <h3>Electronics Engineering</h3>
+                            <p>Semiconductors, micro-architecture, and embedded systems.</p>
+                            <a href="#" class="learn-link">Learn More <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </div>
+                    <!-- 5. CIT -->
+                    <div class="program-card tilt-card contact-box-premium reveal-up">
+                        <img src="assets/img/cit by google pic.jpg" loading="lazy" alt="Computer Coding">
+                        <div class="card-content">
+                            <div class="icon-box"><i class="fa-solid fa-code"></i></div>
+                            <h3>Computer Information Technology</h3>
+                            <p>AI, machine learning, cybersecurity and software.</p>
+                            <a href="#" class="learn-link">Learn More <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </div>
+                    <!-- 6. Short Courses -->
+                    <div class="program-card highlight-card tilt-card contact-box-premium reveal-up">
+                        <img src="assets/img/short courses.jpeg" style="opacity: 0.4;" loading="lazy" alt="Research">
+                        <div class="card-content">
+                            <h3>Other short courses</h3>
+                            <p class="text-white-50">Contribute to world-changing discoveries.</p>
+                            <a href="#" class="btn-glow mt-3">View Research</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Principal Message -->
+        <section class="section-padding principal-section">
+            <div class="principal-bg-accent" style="top: -50px; left: -50px;"></div>
+            <div class="principal-bg-accent" style="bottom: -50px; right: -50px; background: blue;"></div>
+            <div class="container position-relative z-1">
+                <div class="glass-container reveal-up"
+                    style="background: rgba(255,255,255,0.05); backdrop-filter: blur(20px); border: 1px solid var(--border-color); padding: 40px; border-radius: 30px;">
+                    <div class="row align-items-center">
+                        <div class="col-lg-5">
+                            <div class="principal-img-wrapper position-relative">
+                                <img src="assets/img/principal picture.jpg" loading="lazy"
+                                    alt="Portrait of President Eleanor Vance" class="principal-img">
+                                <div class="img-badge">
+                                    <span class="d-block fw-bold">Sr. Javed Ali Bhidwal</span>
+                                    <small class="text-muted">Principal & Chancellor</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 p-lg-5 mt-4 mt-lg-0">
+                            <i class="fa-solid fa-quote-left quote-icon display-3 text-muted opacity-25 mb-3"
+                                aria-hidden="true"></i>
+                            <h2 class="mb-4">"Education is the kindling of a flame, not the filling of a vessel."</h2>
+                            <p class="lead text-muted mb-4">
+                                We don't just teach the future; we create it. Our students are challenged to think
+                                critically, act ethically, and dream boldly. Join a community where potential has no
+                                ceiling and innovation knows no bounds.
+                            </p>
+                            <img src="assets/img/javed 2.png" loading="lazy" alt="President's Signature"
+                                class="signature" style="height: 60px; opacity: 0.6; filter: invert(0.5);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Statistics / Counters -->
+        <section class="section-padding bg-paper">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-6 col-md-3 mb-4 mb-md-0 reveal-up">
+                        <div class="stat-box-modern">
+                            <div class="display-3 fw-bold counter text-gradient-dark" data-target="10000">0</div>
+                            <p class="text-muted text-uppercase ls-1 fw-bold">Students</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 mb-4 mb-md-0 reveal-up delay-1">
+                        <div class="stat-box-modern">
+                            <div class="display-3 fw-bold counter text-gradient-dark" data-target="1200">0</div>
+                            <p class="text-muted text-uppercase ls-1 fw-bold">Faculty</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 mb-4 mb-md-0 reveal-up delay-2">
+                        <div class="stat-box-modern">
+                            <div class="display-3 fw-bold counter text-gradient-dark" data-target="60">0</div>
+                            <p class="text-muted text-uppercase ls-1 fw-bold">Programs</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 reveal-up delay-3">
+                        <div class="stat-box-modern">
+                            <div class="d-flex justify-content-center align-items-baseline">
+                                <div class="display-3 fw-bold counter text-gradient-dark" data-target="99">0</div>
+                                <span class="h2 text-gradient-dark">%</span>
+                            </div>
+                            <p class="text-muted text-uppercase ls-1 fw-bold">Employment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Events Section -->
+        <section id="events" class="section-padding">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-end mb-5 reveal-up">
+                    <div>
+                        <h5 class="section-tag">CALENDAR</h5>
+                        <h2 class="section-heading">Campus Events</h2>
+                    </div>
+                    <a href="#" class="icon-link d-none d-md-block">Full Calendar <i
+                            class="fa-solid fa-calendar-days ms-2"></i></a>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Existing Cards -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="event-card-lg tilt-card contact-box-premium reveal-up">
+                            <div class="event-thumb">
+                                <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=600&auto=format&fit=crop"
+                                    loading="lazy" alt="Robotics Showcase">
+                                <div class="date-tag">
+                                    <span class="d-block fw-bold h4 mb-0">08</span>
+                                    <span class="d-block small">Jan</span>
+                                </div>
+                            </div>
+                            <div class="event-content">
+                                <span class="badge bg-light text-dark mb-3 border align-self-start">Sports</span>
+                                <h4>Annual Sport Gala 2026</h4>
+                                <p class="text-muted small mb-3">There are a lot of games on the day of sportgala you
+                                    wil particpate and enjoy.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <small class="text-muted"><i class="fa-regular fa-clock me-1"></i> 10:00 AM</small>
+                                    <a href="#" class="icon-link">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="event-card-lg tilt-card contact-box-premium reveal-up">
+                            <div class="event-thumb">
+                                <img src="https://images.unsplash.com/photo-1544531835-3a99008aaaae?q=80&w=600&auto=format&fit=crop"
+                                    loading="lazy" alt="Leadership Summit">
+                                <div class="date-tag">
+                                    <span class="d-block fw-bold h4 mb-0">22</span>
+                                    <span class="d-block small">OCT</span>
+                                </div>
+                            </div>
+                            <div class="event-content">
+                                <span class="badge bg-light text-dark mb-3 border align-self-start">Seminar</span>
+                                <h4>Annual Function 2026</h4>
+                                <p class="text-muted small mb-3">After the result announcment .</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <small class="text-muted"><i class="fa-regular fa-clock me-1"></i> 10:00 AM</small>
+                                    <a href="#" class="icon-link">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="event-card-lg tilt-card contact-box-premium reveal-up">
+                            <div class="event-thumb">
+                                <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=600&auto=format&fit=crop"
+                                    loading="lazy" alt="Code Hackathon">
+                                <div class="date-tag">
+                                    <span class="d-block fw-bold h4 mb-0">05</span>
+                                    <span class="d-block small">NOV</span>
+                                </div>
+                            </div>
+                            <div class="event-content">
+                                <span class="badge bg-light text-dark mb-3 border align-self-start">Cultural</span>
+                                <h4>Cultural Day</h4>
+                                <p class="text-muted small mb-3">WE respresent our culture .</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <small class="text-muted"><i class="fa-regular fa-clock me-1"></i> All Day</small>
+                                    <a href="#" class="icon-link">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- New Cards -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="event-card-lg tilt-card contact-box-premium reveal-up">
+                            <div class="event-thumb">
+                                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=600&auto=format&fit=crop"
+                                    loading="lazy" alt="Sports Meet">
+                                <div class="date-tag">
+                                    <span class="d-block fw-bold h4 mb-0">12</span>
+                                    <span class="d-block small">NOV</span>
+                                </div>
+                            </div>
+                            <div class="event-content">
+                                <span class="badge bg-light text-dark mb-3 border align-self-start">Sports</span>
+                                <h4>Inter-Varsity Sports</h4>
+                                <p class="text-muted small mb-3">Cheer for our athletes in the annual championship.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <small class="text-muted"><i class="fa-regular fa-clock me-1"></i> 09:00 AM</small>
+                                    <a href="#" class="icon-link">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="event-card-lg tilt-card contact-box-premium reveal-up">
+                            <div class="event-thumb">
+                                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=600&auto=format&fit=crop"
+                                    loading="lazy" alt="Art Exhibition">
+                                <div class="date-tag">
+                                    <span class="d-block fw-bold h4 mb-0">20</span>
+                                    <span class="d-block small">NOV</span>
+                                </div>
+                            </div>
+                            <div class="event-content">
+                                <span class="badge bg-light text-dark mb-3 border align-self-start">Culture</span>
+                                <h4>Annual Art Exhibition</h4>
+                                <p class="text-muted small mb-3">Showcasing creative works from our fine arts
+                                    department.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <small class="text-muted"><i class="fa-regular fa-clock me-1"></i> 11:00 AM</small>
+                                    <a href="#" class="icon-link">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="event-card-lg tilt-card contact-box-premium reveal-up">
+                            <div class="event-thumb">
+                                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600&auto=format&fit=crop"
+                                    loading="lazy" alt="Alumni Meet">
+                                <div class="date-tag">
+                                    <span class="d-block fw-bold h4 mb-0">01</span>
+                                    <span class="d-block small">DEC</span>
+                                </div>
+                            </div>
+                            <div class="event-content">
+                                <span class="badge bg-light text-dark mb-3 border align-self-start">Community</span>
+                                <h4>Grand Alumni Reunion</h4>
+                                <p class="text-muted small mb-3">Welcoming back our graduates for a night of networking.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <small class="text-muted"><i class="fa-regular fa-clock me-1"></i> 06:00 PM</small>
+                                    <a href="#" class="icon-link">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Highlights (Video) -->
+        <section id="highlights" class="video-section position-relative overflow-hidden">
+            <video autoplay muted loop playsinline class="bg-video" poster="assets/img/poster about video.jpg">
+                <source src="assets/video/event.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+            <div
+                class="container h-100 position-relative z-2 d-flex flex-column justify-content-center text-center text-white">
+                <div class="reveal-zoom">
+                    <span class="badge rounded-pill border border-light px-3 py-2 mb-3">CAMPUS LIFE</span>
+                    <h2 class="display-3 fw-bold mb-4">Experience Aetherius</h2>
+                    <p class="lead mb-5 opacity-75 mx-auto" style="max-width: 700px;">
+                        Immerse yourself in a campus designed for collaboration. From state-of-the-art labs to historic
+                        halls, every corner inspires.
+                    </p>
+                    <button class="btn-play pulse-animation" aria-label="Play/Pause Video">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Testimonials -->
+        <section class="section-padding bg-dark-gradient position-relative overflow-hidden">
+            <div class="particle p1"></div>
+            <div class="particle p2"></div>
+
+            <div class="container position-relative z-1">
+                <h5 class="section-tag text-center text-white-50 reveal-up">VOICES</h5>
+                <h2 class="section-heading text-center text-white mb-5 reveal-up">Student Stories</h2>
+
+                <div class="testimonial-grid">
+                    <div class="testimonial-card-premium reveal-left">
+                        <div class="quote-mark"><i class="fa-solid fa-quote-right"></i></div>
+                        <p class="review text-white">"The lab facilities are world-class. I published my research before
+                            graduating."</p>
+                        <div class="user-meta mt-4 d-flex align-items-center gap-3">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" loading="lazy"
+                                alt="Samantha Lo">
+                            <div>
+                                <h5 class="text-white mb-0">Samantha Lo</h5>
+                                <small class="text-white-50">M.S. Physics</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card-premium reveal-up p-5 justify-content-center">
+                        <div class="quote-mark text-accent"><i class="fa-solid fa-quote-right"></i></div>
+                        <h4 class="review text-white mb-4">"Aetherius isn't just a university; it's a launchpad. The
+                            incubator program funded my startup in junior year."</h4>
+                        <div class="user-meta mt-auto d-flex align-items-center gap-3">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" loading="lazy" alt="James Carter"
+                                style="width: 60px; height: 60px;">
+                            <div>
+                                <h5 class="text-white mb-0">James Carter</h5>
+                                <small class="text-white-50">CEO, NovoTech</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card-premium reveal-right">
+                        <div class="quote-mark"><i class="fa-solid fa-quote-right"></i></div>
+                        <p class="review text-white">"Mentors here care. They pushed me to think beyond the textbook."
+                        </p>
+                        <div class="user-meta mt-4 d-flex align-items-center gap-3">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" loading="lazy"
+                                alt="Elena Rodriguez">
+                            <div>
+                                <h5 class="text-white mb-0">Elena Rodriguez</h5>
+                                <small class="text-white-50">MBA 2024</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New: Alumni Success Stories -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="text-center mb-5 reveal-up">
+                    <h5 class="section-tag">GLOBAL IMPACT</h5>
+                    <h2 class="section-heading">Alumni Success</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="faculty-card tilt-card contact-box-premium reveal-up">
+                            <div class="faculty-img">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop"
+                                    loading="lazy" alt="Alumni 1">
+                            </div>
+                            <div class="faculty-info text-start">
+                                <h4>Michael Chang</h4>
+                                <p class="text-accent mb-2">Class of 2018</p>
+                                <p class="small text-muted">"The foundation I built here allowed me to launch 3
+                                    successful startups in Silicon Valley."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="faculty-card tilt-card contact-box-premium reveal-up">
+                            <div class="faculty-img">
+                                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=800&auto=format&fit=crop"
+                                    loading="lazy" alt="Alumni 2">
+                            </div>
+                            <div class="faculty-info text-start">
+                                <h4>Sarah Jenkins</h4>
+                                <p class="text-accent mb-2">Class of 2020</p>
+                                <p class="small text-muted">"Leading renewable energy projects at a global scale was
+                                    just a dream until Aetherius gave me the tools."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="faculty-card tilt-card contact-box-premium reveal-up">
+                            <div class="faculty-img">
+                                <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=800&auto=format&fit=crop"
+                                    loading="lazy" alt="Alumni 3">
+                            </div>
+                            <div class="faculty-info text-start">
+                                <h4>David Okonjo</h4>
+                                <p class="text-accent mb-2">Class of 2019</p>
+                                <p class="small text-muted">"The network here is incredible. I found my co-founders and
+                                    investors through the alumni association."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Faculty Section -->
+        <section id="people" class="section-padding bg-paper">
+            <div class="container">
+                <div class="text-center mb-5 reveal-up">
+                    <h5 class="section-tag">MENTORS</h5>
+                    <h2 class="section-heading">Distinguished Faculty</h2>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="faculty-card tilt-card contact-box-premium reveal-up">
+                            <div class="faculty-img">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop"
+                                    loading="lazy" alt="Dr. Alan Grant">
+                                <div class="faculty-overlay">
+                                    <div class="socials">
+                                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                                        <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faculty-info">
+                                <h4>Dr. Alan Grant</h4>
+                                <p class="text-accent">Dean of Science</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="faculty-card tilt-card contact-box-premium reveal-up">
+                            <div class="faculty-img">
+                                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop"
+                                    loading="lazy" alt="Prof. Marcus Chen">
+                                <div class="faculty-overlay">
+                                    <div class="socials">
+                                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                                        <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faculty-info">
+                                <h4>Prof. Marcus Chen</h4>
+                                <p class="text-accent">Robotics Lead</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="faculty-card tilt-card contact-box-premium reveal-up">
+                            <div class="faculty-img">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop"
+                                    loading="lazy" alt="Dr. Sarah Kline">
+                                <div class="faculty-overlay">
+                                    <div class="socials">
+                                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                                        <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faculty-info">
+                                <h4>Dr. Sarah Kline</h4>
+                                <p class="text-accent">Quantum Physics</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="faculty-card tilt-card contact-box-premium reveal-up">
+                            <div class="faculty-img">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop"
+                                    loading="lazy" alt="Prof. David Ross">
+                                <div class="faculty-overlay">
+                                    <div class="socials">
+                                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                                        <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faculty-info">
+                                <h4>Prof. David Ross</h4>
+                                <p class="text-accent">Civil Infrastructure</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Staff Section -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 reveal-up">
+                        <h5 class="section-tag">ADMINISTRATION</h5>
+                        <h2 class="mb-4 display-5 fw-bold">Supporting Your Journey</h2>
+                        <p class="text-muted mb-4">Our dedicated staff works tirelessly behind the scenes to ensure
+                            student success, campus safety, and operational excellence.</p>
+                        <a href="#" class="btn-link-arrow">Meet the Team <i
+                                class="fa-solid fa-arrow-right ms-2"></i></a>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="row g-4">
+                            <div class="col-md-6 reveal-up delay-1">
+                                <div class="staff-row d-flex align-items-center bg-paper p-3 rounded-4 border">
+                                    <img src="https://randomuser.me/api/portraits/men/85.jpg" loading="lazy"
+                                        class="rounded-circle me-3" width="60" height="60" alt="Robert Fox">
+                                    <div>
+                                        <h6 class="mb-0 fw-bold">Robert Fox</h6>
+                                        <small class="text-muted">Head of Admissions</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 reveal-up delay-2">
+                                <div class="staff-row d-flex align-items-center bg-paper p-3 rounded-4 border">
+                                    <img src="https://randomuser.me/api/portraits/women/50.jpg" loading="lazy"
+                                        class="rounded-circle me-3" width="60" height="60" alt="Jenny Wilson">
+                                    <div>
+                                        <h6 class="mb-0 fw-bold">Jenny Wilson</h6>
+                                        <small class="text-muted">Student Affairs</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 reveal-up delay-3">
+                                <div class="staff-row d-flex align-items-center bg-paper p-3 rounded-4 border">
+                                    <img src="https://randomuser.me/api/portraits/men/44.jpg" loading="lazy"
+                                        class="rounded-circle me-3" width="60" height="60" alt="Darlene Robertson">
+                                    <div>
+                                        <h6 class="mb-0 fw-bold">Darlene Robertson</h6>
+                                        <small class="text-muted">Campus Security</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 reveal-up delay-4">
+                                <div class="staff-row d-flex align-items-center bg-paper p-3 rounded-4 border">
+                                    <img src="https://randomuser.me/api/portraits/women/33.jpg" loading="lazy"
+                                        class="rounded-circle me-3" width="60" height="60" alt="Theresa Webb">
+                                    <div>
+                                        <h6 class="mb-0 fw-bold">Theresa Webb</h6>
+                                        <small class="text-muted">Financial Aid</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New: Admissions Process -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="text-center mb-5 reveal-up">
+                    <h5 class="section-tag">ADMISSIONS</h5>
+                    <h2 class="section-heading">How to Apply</h2>
+                </div>
+                <div class="process-timeline reveal-up">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Online Application</h4>
+                            <p class="text-muted list-unstyled mb-0">Submit your personal details, academic history, and
+                                statement of purpose via our portal.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Entrance Exam</h4>
+                            <p class="text-muted list-unstyled mb-0">Qualify through our standardized aptitude test
+                                designed to assess your critical thinking.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Interview</h4>
+                            <p class="text-muted list-unstyled mb-0">Shortlisted candidates are invited for a personal
+                                interview with our faculty panel.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Admission Offer</h4>
+                            <p class="text-muted list-unstyled mb-0">Successful applicants receive their offer letter.
+                                Welcome to the Aetherius family!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-5 reveal-up">
+                    <a href="#apply" class="btn-premium-cta">
+                        <span>Start Your Application</span>
+                        <div class="btn-shine"></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. Contact Section -->
+        <section id="contact" class="section-padding bg-paper">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-6 reveal-up">
+                        <h5 class="section-tag">GET IN TOUCH</h5>
+                        <h2 class="section-heading mb-4">Start Your Future</h2>
+                        <form class="glass-form">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="name" placeholder="Name" required>
+                                <label for="name">Full Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="email" placeholder="name@example.com"
+                                    required>
+                                <label for="email">Email Address</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <select class="form-select" id="program" required>
+                                    <option selected disabled value="">Select Interest</option>
+                                    <option value="1">Undergraduate</option>
+                                    <option value="2">Postgraduate</option>
+                                    <option value="3">Research</option>
+                                </select>
+                                <label for="program">Program</label>
+                            </div>
+                            <div class="form-floating mb-4">
+                                <textarea class="form-control" placeholder="Message" id="message" style="height: 120px"
+                                    required></textarea>
+                                <label for="message">How can we help?</label>
+                            </div>
+                            <button type="submit" class="btn-solid-large w-100">Send Inquiry</button>
+                        </form>
+                    </div>
+                    <div class="col-lg-6 reveal-up delay-1">
+                        <!-- 12. Map Embed -->
+                        <div class="map-container h-100 rounded-4 overflow-hidden shadow-lg position-relative border">
+                            <iframe src="https://maps.app.goo.gl/zArFAeF5KRvAVvQRA" width="100%" height="100%"
+                                style="border:0; min-height: 500px;" allowfullscreen="" loading="lazy"
+                                title="University Campus Map"></iframe>
+                            <div class="map-overlay-info">
+                                <div class="bg-white p-3 rounded-3 shadow-sm text-dark">
+                                    <h6 class="fw-bold mb-1">Main Campus</h6>
+                                    <p class="small mb-0 text-muted">500 Parnassus Ave, San Francisco</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-premium">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <div class="brand-icon-sm"><i class="fa-solid fa-atom"></i></div>
+                        <span class="h4 text-white font-serif mb-0">GCT Bhakkar</span>
+                    </div>
+                    <p class="text-white-50">Empowering the next generation of technical visionaries through world-class
+                        education and relentless innovation.</p>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h6 class="text-white mb-3">Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="pages/about.html">About Us</a></li>
+                        <li><a href="pages/academics.html">Admissions</a></li>
+                        <li><a href="pages/contact.html">Campus Map</a></li>
+                        <li><a href="pages/developers.html">Developers</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h6 class="text-white mb-3">Academics</h6>
+                    <ul class="footer-links">
+                        <li><a href="pages/academics.html">Undergraduate</a></li>
+                        <li><a href="pages/academics.html">Postgraduate</a></li>
+                        <li><a href="pages/news.html">Research</a></li>
+                        <li><a href="pages/facilities.html">Library</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <h6 class="text-white mb-3">Connect</h6>
+                    <div class="social-grid">
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <p class="text-white-50 small mt-3">info@gctbhakkar.edu.pk | +92 (0453) 920000</p>
+                </div>
+            </div>
+            <div class="footer-bottom mt-5 pt-4 border-top border-white-10 text-center">
+                <p>&copy; 2026 GCT Bhakkar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/bootstrapJs/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact GCT Bhakkar - Get in touch with us for inquiries and admissions.">
+    <title>Contact Us | GCT BHAKKAR</title>
+    <!-- Bootstrap 5 -->
+    <link href="../css/bootstrapCss/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!-- Loading Overlay -->
+    <div id="loader" class="loader-overlay">
+        <div class="loader-content">
+            <div class="loader-logo">GCT BKR</div>
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top premium-nav">
+            <div class="container-fluid px-lg-5">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
+                    <div class="brand-icon"><i class="fa-solid fa-atom"></i></div>
+                    <div class="brand-text">
+                        <span class="block fw-bold display-font">GCT</span>
+                        <span class="block small text-spaced">BHAKKAR</span>
+                    </div>
+                </a>
+
+                <button class="menu-trigger d-lg-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#premiumOffcanvas">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <div class="collapse navbar-collapse d-none d-lg-block">
+                    <ul class="navbar-nav mx-auto align-items-center bg-glass-pill">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>
+                        <li class="nav-item"><a class="nav-link" href="facilities.html">Facilities</a></li>
+                        <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-4">
+                        <button class="theme-switch-wrapper" aria-label="Toggle Dark Mode">
+                            <div class="toggle-track">
+                                <div class="toggle-indicator"></div>
+                                <div class="icon-container-sun"><i class="fa-solid fa-sun sun-icon"></i></div>
+                                <div class="icon-container-moon"><i class="fa-solid fa-moon moon-icon"></i></div>
+                            </div>
+                        </button>
+                        <a href="contact.html" class="btn-premium-cta">
+                            <i class="fa-solid fa-paper-plane me-1"></i>
+                            <span>Apply Now</span>
+                            <div class="btn-shine"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end premium-menu-glass" tabindex="-1" id="premiumOffcanvas">
+        <div class="offcanvas-bg-glow"></div>
+        <div class="offcanvas-header justify-content-between align-items-center p-4">
+            <div class="brand-group text-white">
+                <i class="fa-solid fa-atom fs-2"></i>
+                <span class="fw-bold fs-3 ms-2 font-serif">GCT BKR</span>
+            </div>
+            <button type="button" class="btn-close-custom" data-bs-dismiss="offcanvas">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-center px-5">
+            <ul class="premium-menu-list">
+                <li class="menu-item-reveal"><a href="../index.html" class="menu-link" data-text="Home">Home</a></li>
+                <li class="menu-item-reveal"><a href="about.html" class="menu-link" data-text="About">About</a></li>
+                <li class="menu-item-reveal"><a href="academics.html" class="menu-link"
+                        data-text="Academics">Academics</a></li>
+                <li class="menu-item-reveal"><a href="facilities.html" class="menu-link"
+                        data-text="Facilities">Facilities</a></li>
+                <li class="menu-item-reveal"><a href="news.html" class="menu-link" data-text="News">News</a></li>
+                <li class="menu-item-reveal"><a href="events.html" class="menu-link" data-text="Events">Events</a></li>
+                <li class="menu-item-reveal"><a href="developers.html" class="menu-link"
+                        data-text="Developers">Developers</a></li>
+                <li class="menu-item-reveal"><a href="contact.html" class="menu-link" data-text="Contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section with Ken Burns -->
+        <section class="hero-section" style="height: 70vh; min-height: 500px;">
+            <div class="hero-slideshow">
+                <div class="slide active"
+                    style="background-image: url('../assets/img/front 3.jpeg'); animation: kenBurns 20s infinite alternate;">
+                </div>
+            </div>
+            <div class="hero-overlay-gradient"
+                style="background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%);"></div>
+            <div
+                class="container position-relative z-2 h-100 d-flex flex-column justify-content-center align-items-center text-center">
+                <h5 class="section-tag text-white-50 reveal-up" style="letter-spacing: 5px;">GET IN TOUCH</h5>
+                <h1 class="hero-title animate-text" style="font-size: clamp(3rem, 8vw, 5.5rem);">Contact <span
+                        class="text-gradient">Us.</span></h1>
+                <p class="hero-subtitle animate-text delay-1 fs-4 opacity-75">Your journey to excellence starts with a
+                    simple conversation.</p>
+                <div class="mt-4 animate-text delay-2">
+                    <a href="#contact-form" class="btn-glass-large">
+                        <i class="fa-solid fa-envelope-open-text me-2"></i> Reach Out Today
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact-form" class="section-padding bg-paper overflow-hidden">
+            <div class="container">
+                <div class="row g-5 align-items-start">
+                    <!-- Contact Form -->
+                    <div class="col-lg-6 reveal-up">
+                        <div class="glass-container p-5 shadow-2xl"
+                            style="border-radius: 40px; background: rgba(var(--bg-rgb), 0.7); backdrop-filter: blur(20px); border: 1px solid var(--border-color);">
+                            <h5 class="section-tag">COMMUNICATION</h5>
+                            <h2 class="section-heading mb-4">Send a <span class="serif-italic">Message</span></h2>
+                            <p class="text-muted mb-4">Fill out the form below and one of our academic advisors will get
+                                back to you within 24 hours.</p>
+
+                            <form class="premium-form">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control bg-transparent" id="name"
+                                                placeholder="Name" required
+                                                style="border-radius: 15px; border-color: rgba(var(--accent-rgb), 0.2);">
+                                            <label for="name">Full Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control bg-transparent" id="email"
+                                                placeholder="name@example.com" required
+                                                style="border-radius: 15px; border-color: rgba(var(--accent-rgb), 0.2);">
+                                            <label for="email">Email Address</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <select class="form-select bg-transparent" id="purpose" required
+                                        style="border-radius: 15px; border-color: rgba(var(--accent-rgb), 0.2);">
+                                        <option selected disabled value="">Purpose of Inquiry</option>
+                                        <option value="1">Admissions & Eligibility</option>
+                                        <option value="2">Department Information</option>
+                                        <option value="3">Scholarship Queries</option>
+                                        <option value="4">Other Inquiries</option>
+                                    </select>
+                                    <label for="purpose">Inquiry Type</label>
+                                </div>
+                                <div class="form-floating mb-4">
+                                    <textarea class="form-control bg-transparent" placeholder="Message" id="message"
+                                        style="height: 150px; border-radius: 15px; border-color: rgba(var(--accent-rgb), 0.2);"
+                                        required></textarea>
+                                    <label for="message">How can we assist you?</label>
+                                </div>
+                                <button type="submit"
+                                    class="btn-premium-cta w-100 py-3 d-flex align-items-center justify-content-center gap-2"
+                                    style="border-radius: 15px;">
+                                    <span>Initiate Contact</span>
+                                    <i class="fa-solid fa-paper-plane small"></i>
+                                    <div class="btn-shine"></div>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Contact Details & Map -->
+                    <div class="col-lg-6">
+                        <div class="row g-4">
+                            <!-- Location Box -->
+                            <div class="col-12 reveal-up delay-1">
+                                <div class="contact-box-premium tilt-card glass-container p-4 d-flex align-items-center gap-4 shadow-sm border-0"
+                                    style="border-radius: 25px; transition: all 0.5s var(--ease-out-expo);">
+                                    <div class="icon-box bg-accent text-white d-flex align-items-center justify-content-center"
+                                        style="width: 70px; height: 70px; border-radius: 20px; font-size: 1.5rem;">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bold mb-1 opacity-50 text-uppercase ls-1"
+                                            style="font-size: 0.7rem;">Visit Us</h6>
+                                        <h4 class="fw-bold mb-0">Main Campus, Bhakkar</h4>
+                                        <p class="text-muted small mb-0">GCT Road, Bhakkar, Punjab, Pakistan</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Phone Box -->
+                            <div class="col-12 reveal-up delay-2">
+                                <div class="contact-box-premium tilt-card glass-container p-4 d-flex align-items-center gap-4 shadow-sm border-0"
+                                    style="border-radius: 25px; transition: all 0.5s var(--ease-out-expo);">
+                                    <div class="icon-box bg-accent text-white d-flex align-items-center justify-content-center"
+                                        style="width: 70px; height: 70px; border-radius: 20px; font-size: 1.5rem;">
+                                        <i class="fa-solid fa-mobile-screen-button"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bold mb-1 opacity-50 text-uppercase ls-1"
+                                            style="font-size: 0.7rem;">Call Support</h6>
+                                        <h4 class="fw-bold mb-0">+92 (0453) 920000</h4>
+                                        <p class="text-muted small mb-0">Monday to Friday, 8:00 AM - 4:00 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Email Box -->
+                            <div class="col-12 reveal-up delay-3">
+                                <div class="contact-box-premium tilt-card glass-container p-4 d-flex align-items-center gap-4 shadow-sm border-0"
+                                    style="border-radius: 25px; transition: all 0.5s var(--ease-out-expo);">
+                                    <div class="icon-box bg-accent text-white d-flex align-items-center justify-content-center"
+                                        style="width: 70px; height: 70px; border-radius: 20px; font-size: 1.5rem;">
+                                        <i class="fa-solid fa-envelope-open-text"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bold mb-1 opacity-50 text-uppercase ls-1"
+                                            style="font-size: 0.7rem;">Email Inquiry</h6>
+                                        <h4 class="fw-bold mb-0">info@gctbhakkar.edu.pk</h4>
+                                        <p class="text-muted small mb-0">For official correspondence and admissions.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Map Container -->
+                            <div class="col-12 reveal-up delay-4">
+                                <div class="map-wrapper glass-container p-2 shadow-lg border-0"
+                                    style="border-radius: 40px; height: 350px; overflow: hidden;">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13735.617758376442!2d71.0543202!3d31.6310232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3921503333333333%3A0x2222222222222222!2sGCT%20Bhakkar!5e0!3m2!1sen!2spk!4v1700000000000!5m2!1sen!2spk"
+                                        width="100%" height="100%" style="border-radius: 35px; border:0;"
+                                        allowfullscreen="" loading="lazy"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-premium">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <div class="brand-icon-sm"><i class="fa-solid fa-atom"></i></div>
+                        <span class="h4 text-white font-serif mb-0">GCT Bhakkar</span>
+                    </div>
+                    <p class="text-white-50">Empowering the next generation of technical visionaries through world-class
+                        education and relentless innovation.</p>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h6 class="text-white mb-3">Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="academics.html">Admissions</a></li>
+                        <li><a href="contact.html">Campus Map</a></li>
+                        <li><a href="developers.html">Developers</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h6 class="text-white mb-3">Academics</h6>
+                    <ul class="footer-links">
+                        <li><a href="academics.html">Undergraduate</a></li>
+                        <li><a href="academics.html">Postgraduate</a></li>
+                        <li><a href="news.html">Research</a></li>
+                        <li><a href="facilities.html">Library</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <h6 class="text-white mb-3">Connect</h6>
+                    <div class="social-grid">
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <p class="text-white-50 small mt-3">info@gctbhakkar.edu.pk | +92 (0453) 920000</p>
+                </div>
+            </div>
+            <div class="footer-bottom mt-5 pt-4 border-top border-white-10 text-center">
+                <p>&copy; 2026 GCT Bhakkar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle -->
+    <script src="../js/bootstrapJs/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

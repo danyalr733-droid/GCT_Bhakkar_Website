@@ -1,0 +1,303 @@
+/* --- DEVELOPERS PAGE SPECIFIC STYLES --- */
+
+/* Glass Variables for this page specifically */
+:root {
+    --glass-card-bg: rgba(10, 10, 10, 0.45);
+    --glass-card-border: rgba(255, 255, 255, 0.12);
+    --glass-card-blur: blur(50px) saturate(180%);
+    --glass-highlight: rgba(255, 255, 255, 0.15);
+    --apple-ease: cubic-bezier(0.16, 1, 0.3, 1);
+    
+    /* Responsive Spacing Vars */
+    --section-padding: clamp(60px, 10vw, 120px);
+    --grid-gap: clamp(20px, 4vw, 40px);
+}
+
+[data-theme="light"] {
+    --glass-card-bg: rgba(255, 255, 255, 0.85); /* More opaque for text clarity */
+    --glass-card-border: rgba(0, 0, 0, 0.15);
+    --glass-highlight: rgba(0, 0, 0, 0.04);
+}
+
+/* Page Background Enhancement */
+.developers-page-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: var(--bg-body);
+    overflow: hidden;
+}
+
+.blur-blob {
+    position: absolute;
+    width: 40vw;
+    height: 40vw;
+    background: radial-gradient(circle, rgba(var(--accent-rgb), 0.15) 0%, transparent 70%);
+    filter: blur(120px);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+    animation: blobMove 20s infinite alternate ease-in-out;
+}
+
+.blob-1 { top: -10%; left: -10%; background: radial-gradient(circle, rgba(var(--accent-rgb), 0.2) 0%, transparent 70%); }
+.blob-2 { bottom: -10%; right: -10%; background: radial-gradient(circle, rgba(var(--accent-rgb), 0.1) 0%, transparent 70%); animation-delay: -5s; }
+
+@keyframes blobMove {
+    from { transform: translate(0, 0) scale(1); }
+    to { transform: translate(10%, 10%) scale(1.1); }
+}
+
+/* Hero Section */
+.dev-hero {
+    height: 60vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 100px;
+}
+
+.dev-hero-glass {
+    background: var(--glass-card-bg);
+    backdrop-filter: var(--glass-card-blur);
+    border: 1px solid var(--glass-card-border);
+    padding: 80px 40px;
+    border-radius: 50px;
+    max-width: 950px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    animation: devHeroEntry 1.4s var(--apple-ease) forwards;
+}
+
+.dev-hero-glass::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--glass-highlight), transparent);
+}
+
+@keyframes devHeroEntry {
+    from { opacity: 0; transform: translateY(40px); filter: blur(10px); }
+    to { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+
+.dev-subtitle {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 1.5rem auto 0;
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+/* Developers Grid */
+.dev-grid-section {
+    padding: var(--section-padding) 0;
+}
+
+.devs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+    gap: var(--grid-gap);
+    width: 90%;
+    margin: 0 auto;
+}
+
+.dev-card {
+    background: var(--glass-card-bg);
+    backdrop-filter: var(--glass-card-blur);
+    border: 1px solid var(--glass-card-border);
+    border-radius: 45px;
+    padding: 50px 35px;
+    height: 100%;
+    transition: all 0.8s var(--apple-ease);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.dev-card::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), var(--glass-highlight), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.dev-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.2);
+    border-color: transparent;
+    background: rgba(40, 40, 40, 0.35);
+}
+
+.dev-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1.5px;
+    border-radius: 45px;
+    background: conic-gradient(from var(--angle, 0deg), transparent, var(--glass-highlight), transparent, var(--glass-highlight), transparent);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+}
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.dev-card:hover::after {
+    opacity: 1;
+    animation: rotateAngle 4s linear infinite;
+}
+
+@keyframes rotateAngle {
+    to { --angle: 360deg; }
+}
+
+[data-theme="light"] .dev-card:hover {
+    background: rgba(255, 255, 255, 0.55);
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+.dev-card > * { position: relative; z-index: 1; }
+
+.dev-card:hover::before {
+    opacity: 1;
+}
+
+/* Photo Mask */
+.dev-photo-wrapper {
+    width: 160px;
+    height: 160px;
+    border-radius: 45px; /* Apple-style rounded rect */
+    overflow: hidden;
+    margin-bottom: 25px;
+    border: 3px solid var(--glass-card-border);
+    transition: transform 0.6s var(--apple-ease);
+    position: relative;
+    background: var(--bg-surface);
+}
+
+.dev-card:hover .dev-photo-wrapper {
+    transform: scale(1.05) rotate(2deg);
+    border-color: var(--accent);
+}
+
+.dev-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Info Hierarchy */
+.dev-name {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.dev-role {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.dev-bio {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.dev-bio li {
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-left: 1.5rem;
+    text-align: left;
+}
+
+.dev-bio li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* Social Icons */
+.dev-socials {
+    display: flex;
+    gap: 20px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s var(--apple-ease);
+    margin-top: auto;
+}
+
+.dev-card:hover .dev-socials {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dev-social-link {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(var(--accent-rgb), 0.1);
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: all 0.5s var(--apple-ease);
+    border: 1px solid transparent;
+    will-change: transform, background;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+.dev-social-link:hover {
+    background: var(--accent);
+    color: white !important;
+    transform: scale(1.05) translateZ(0);
+}
+
+/* Footer Tag */
+.dev-footer-tag {
+    text-align: center;
+    padding: 40px 0;
+    opacity: 0.6;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .dev-name { font-size: 1.5rem; }
+    .dev-hero-glass { padding: 40px 25px; }
+}

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Latest news and success stories from GCT Bhakkar.">
+    <title>News & Updates | GCT BHAKKAR</title>
+    <!-- Bootstrap 5 -->
+    <link href="../css/bootstrapCss/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!-- Loading Overlay -->
+    <div id="loader" class="loader-overlay">
+        <div class="loader-content">
+            <div class="loader-logo">GCT BKR</div>
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top premium-nav">
+            <div class="container-fluid px-lg-5">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
+                    <div class="brand-icon"><i class="fa-solid fa-atom"></i></div>
+                    <div class="brand-text">
+                        <span class="block fw-bold display-font">GCT</span>
+                        <span class="block small text-spaced">BHAKKAR</span>
+                    </div>
+                </a>
+
+                <button class="menu-trigger d-lg-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#premiumOffcanvas">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <div class="collapse navbar-collapse d-none d-lg-block">
+                    <ul class="navbar-nav mx-auto align-items-center bg-glass-pill">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>
+                        <li class="nav-item"><a class="nav-link" href="facilities.html">Facilities</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="news.html">News</a></li>
+                        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-4">
+                        <button class="theme-switch-wrapper" aria-label="Toggle Dark Mode">
+                            <div class="toggle-track">
+                                <div class="toggle-indicator"></div>
+                                <div class="icon-container-sun"><i class="fa-solid fa-sun sun-icon"></i></div>
+                                <div class="icon-container-moon"><i class="fa-solid fa-moon moon-icon"></i></div>
+                            </div>
+                        </button>
+                        <a href="contact.html" class="btn-premium-cta">
+                            <i class="fa-solid fa-paper-plane me-1"></i>
+                            <span>Apply Now</span>
+                            <div class="btn-shine"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end premium-menu-glass" tabindex="-1" id="premiumOffcanvas">
+        <div class="offcanvas-bg-glow"></div>
+        <div class="offcanvas-header justify-content-between align-items-center p-4">
+            <div class="brand-group text-white">
+                <i class="fa-solid fa-atom fs-2"></i>
+                <span class="fw-bold fs-3 ms-2 font-serif">GCT BKR</span>
+            </div>
+            <button type="button" class="btn-close-custom" data-bs-dismiss="offcanvas">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-center px-5">
+            <ul class="premium-menu-list">
+                <li class="menu-item-reveal"><a href="../index.html" class="menu-link" data-text="Home">Home</a></li>
+                <li class="menu-item-reveal"><a href="about.html" class="menu-link" data-text="About">About</a></li>
+                <li class="menu-item-reveal"><a href="academics.html" class="menu-link"
+                        data-text="Academics">Academics</a></li>
+                <li class="menu-item-reveal"><a href="facilities.html" class="menu-link"
+                        data-text="Facilities">Facilities</a></li>
+                <li class="menu-item-reveal"><a href="news.html" class="menu-link" data-text="News">News</a></li>
+                <li class="menu-item-reveal"><a href="events.html" class="menu-link" data-text="Events">Events</a></li>
+                <li class="menu-item-reveal"><a href="developers.html" class="menu-link"
+                        data-text="Developers">Developers</a></li>
+                <li class="menu-item-reveal"><a href="contact.html" class="menu-link" data-text="Contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section with Ken Burns -->
+        <section class="hero-section" style="height: 70vh; min-height: 500px;">
+            <div class="hero-slideshow">
+                <div class="slide active"
+                    style="background-image: url('../assets/img/colage watsap .jpg'); animation: kenBurns 20s infinite alternate;">
+                </div>
+            </div>
+            <div class="hero-overlay-gradient"
+                style="background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%);"></div>
+            <div
+                class="container position-relative z-2 h-100 d-flex flex-column justify-content-center align-items-center text-center">
+                <h5 class="section-tag text-white-50 reveal-up" style="letter-spacing: 5px;">STAY CONNECTED</h5>
+                <h1 class="hero-title animate-text" style="font-size: clamp(3rem, 8vw, 5.5rem);">News & <span
+                        class="text-gradient">Insights.</span></h1>
+                <p class="hero-subtitle animate-text delay-1 fs-4 opacity-75">The pulse of GCT Bhakkar: Stories of
+                    innovation and success.</p>
+                <div class="mt-4 animate-text delay-2">
+                    <a href="#latest-news" class="btn-glass-large">
+                        <i class="fa-solid fa-newspaper me-2"></i> Browse Updates
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest News Grid -->
+        <section id="latest-news" class="section-padding bg-paper overflow-hidden">
+            <div class="container">
+                <div class="text-center mb-5 reveal-up">
+                    <h5 class="section-tag">CAMPUS PULSE</h5>
+                    <h2 class="section-heading">Latest <span class="serif-italic">Updates</span></h2>
+                </div>
+                <div class="row g-4">
+                    <!-- News 1 -->
+                    <div class="col-md-6 col-lg-4 reveal-up">
+                        <div class="event-card-lg tilt-card h-100 shadow-lg border-0"
+                            style="border-radius: 25px; overflow: hidden; background: var(--bg-surface);">
+                            <div class="event-thumb position-relative" style="height: 250px; overflow: hidden;">
+                                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600&auto=format&fit=crop"
+                                    alt="Campus News" class="w-100 h-100 object-fit-cover transition-all duration-700">
+                                <div class="position-absolute top-0 end-0 p-3">
+                                    <span class="badge glass-container py-2 px-3 text-white border-0"
+                                        style="background: rgba(var(--accent-rgb), 0.8);">Facility</span>
+                                </div>
+                            </div>
+                            <div class="event-content p-4 d-flex flex-column">
+                                <span class="text-accent small fw-bold text-uppercase ls-1 mb-2">February 05,
+                                    2026</span>
+                                <h4 class="fw-bold mb-3">New Tech Lab Inauguration</h4>
+                                <p class="text-muted small mb-4">Our state-of-the-art computer lab is now open for
+                                    students with the latest computing equipment and AI workstations.</p>
+                                <a href="#" class="btn-premium-cta py-2 px-4 mt-auto align-self-start">
+                                    <span>Read Story</span>
+                                    <div class="btn-shine"></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- News 2 -->
+                    <div class="col-md-6 col-lg-4 reveal-up delay-1">
+                        <div class="event-card-lg tilt-card h-100 shadow-lg border-0"
+                            style="border-radius: 25px; overflow: hidden; background: var(--bg-surface);">
+                            <div class="event-thumb position-relative" style="height: 250px; overflow: hidden;">
+                                <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=600&auto=format&fit=crop"
+                                    alt="Student Achievement"
+                                    class="w-100 h-100 object-fit-cover transition-all duration-700">
+                                <div class="position-absolute top-0 end-0 p-3">
+                                    <span class="badge glass-container py-2 px-3 text-white border-0"
+                                        style="background: var(--accent);">Achievement</span>
+                                </div>
+                            </div>
+                            <div class="event-content p-4 d-flex flex-column">
+                                <span class="text-accent small fw-bold text-uppercase ls-1 mb-2">January 28, 2026</span>
+                                <h4 class="fw-bold mb-3">Students Win Regional Tech Fest</h4>
+                                <p class="text-muted small mb-4">Our electrical department students secured the first
+                                    position in the regional project competition held in Lahore.</p>
+                                <a href="#" class="btn-premium-cta py-2 px-4 mt-auto align-self-start">
+                                    <span>Read Story</span>
+                                    <div class="btn-shine"></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- News 3 -->
+                    <div class="col-md-6 col-lg-4 reveal-up delay-2">
+                        <div class="event-card-lg tilt-card h-100 shadow-lg border-0"
+                            style="border-radius: 25px; overflow: hidden; background: var(--bg-surface);">
+                            <div class="event-thumb position-relative" style="height: 250px; overflow: hidden;">
+                                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=600&auto=format&fit=crop"
+                                    alt="Sports News" class="w-100 h-100 object-fit-cover transition-all duration-700">
+                                <div class="position-absolute top-0 end-0 p-3">
+                                    <span class="badge glass-container py-2 px-3 text-white border-0"
+                                        style="background: rgba(var(--accent-rgb), 0.8);">Sports</span>
+                                </div>
+                            </div>
+                            <div class="event-content p-4 d-flex flex-column">
+                                <span class="text-accent small fw-bold text-uppercase ls-1 mb-2">January 15, 2026</span>
+                                <h4 class="fw-bold mb-3">Annual Sports Gala Recap</h4>
+                                <p class="text-muted small mb-4">Highlights from our thrilling annual sports event that
+                                    brought out the competitive spirit of our athletes.</p>
+                                <a href="#" class="btn-premium-cta py-2 px-4 mt-auto align-self-start">
+                                    <span>Read Story</span>
+                                    <div class="btn-shine"></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alumni Stories - Premium Profiles -->
+        <section class="section-padding bg-body position-relative overflow-hidden">
+            <!-- Background Glow -->
+            <div class="position-absolute"
+                style="bottom: 0; right: 0; width: 600px; height: 600px; background: var(--accent); filter: blur(150px); opacity: 0.05; z-index: 0;">
+            </div>
+
+            <div class="container position-relative z-1">
+                <div class="text-center mb-5 reveal-up">
+                    <h5 class="section-tag">ALUMNI SUCCESS</h5>
+                    <h2 class="section-heading">Inspiring <span class="serif-italic">Journeys</span></h2>
+                    <p class="text-muted mx-auto" style="max-width: 600px;">Celebrating the graduates who are shaping
+                        industries across the globe.</p>
+                </div>
+                <div class="row g-4">
+                    <!-- Alumni 1 -->
+                    <div class="col-lg-4 col-md-6 reveal-up">
+                        <div class="faculty-card glass-container h-100 p-4 shadow-sm text-center border-0"
+                            style="border-radius: 30px; transition: all 0.5s var(--ease-out-expo);">
+                            <div class="faculty-img mb-4 mx-auto"
+                                style="width: 150px; height: 150px; border: 4px solid var(--accent); border-radius: 50%; overflow: hidden; padding: 5px;">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop"
+                                    alt="Alumnus" class="w-100 h-100 object-fit-cover rounded-circle">
+                            </div>
+                            <div class="faculty-info">
+                                <h4 class="fw-bold mb-2">Michael Chang</h4>
+                                <span class="badge glass-container py-1 px-3 text-accent border mb-3">Class of
+                                    2018</span>
+                                <p class="text-muted small mb-4" style="line-height: 1.6;">"GCT Bhakkar provided the
+                                    technical foundation I needed to start my own tech firm. The hands-on training was
+                                    invaluable."</p>
+                                <div class="d-flex justify-content-center gap-3">
+                                    <a href="#" class="text-muted hover-accent transition-all"><i
+                                            class="fa-brands fa-linkedin-in"></i></a>
+                                    <a href="#" class="text-muted hover-accent transition-all"><i
+                                            class="fa-brands fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Alumni 2 -->
+                    <div class="col-lg-4 col-md-6 reveal-up delay-1">
+                        <div class="faculty-card glass-container h-100 p-4 shadow-sm text-center border-0"
+                            style="border-radius: 30px; transition: all 0.5s var(--ease-out-expo);">
+                            <div class="faculty-img mb-4 mx-auto"
+                                style="width: 150px; height: 150px; border: 4px solid var(--accent); border-radius: 50%; overflow: hidden; padding: 5px;">
+                                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=800&auto=format&fit=crop"
+                                    alt="Alumna" class="w-100 h-100 object-fit-cover rounded-circle">
+                            </div>
+                            <div class="faculty-info">
+                                <h4 class="fw-bold mb-2">Sarah Jenkins</h4>
+                                <span class="badge glass-container py-1 px-3 text-accent border mb-3">Class of
+                                    2020</span>
+                                <p class="text-muted small mb-4" style="line-height: 1.6;">"The faculty mentored me
+                                    through every challenge. I'm now a Lead Engineer at a top firm, thanks to the vision
+                                    of GCT."</p>
+                                <div class="d-flex justify-content-center gap-3">
+                                    <a href="#" class="text-muted hover-accent transition-all"><i
+                                            class="fa-brands fa-linkedin-in"></i></a>
+                                    <a href="#" class="text-muted hover-accent transition-all"><i
+                                            class="fa-brands fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Alumni 3 -->
+                    <div class="col-lg-4 col-md-6 reveal-up delay-2">
+                        <div class="faculty-card glass-container h-100 p-4 shadow-sm text-center border-0"
+                            style="border-radius: 30px; transition: all 0.5s var(--ease-out-expo);">
+                            <div class="faculty-img mb-4 mx-auto"
+                                style="width: 150px; height: 150px; border: 4px solid var(--accent); border-radius: 50%; overflow: hidden; padding: 5px;">
+                                <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=800&auto=format&fit=crop"
+                                    alt="Alumnus" class="w-100 h-100 object-fit-cover rounded-circle">
+                            </div>
+                            <div class="faculty-info">
+                                <h4 class="fw-bold mb-2">David Okonjo</h4>
+                                <span class="badge glass-container py-1 px-3 text-accent border mb-3">Class of
+                                    2019</span>
+                                <p class="text-muted small mb-4" style="line-height: 1.6;">"Innovating in clean energy
+                                    was my dream. GCT's laboratories gave me the tools to turn that dream into reality."
+                                </p>
+                                <div class="d-flex justify-content-center gap-3">
+                                    <a href="#" class="text-muted hover-accent transition-all"><i
+                                            class="fa-brands fa-linkedin-in"></i></a>
+                                    <a href="#" class="text-muted hover-accent transition-all"><i
+                                            class="fa-brands fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-premium">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <div class="brand-icon-sm"><i class="fa-solid fa-atom"></i></div>
+                        <span class="h4 text-white font-serif mb-0">GCT Bhakkar</span>
+                    </div>
+                    <p class="text-white-50">Empowering the next generation of technical visionaries through world-class
+                        education and relentless innovation.</p>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h6 class="text-white mb-3">Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="academics.html">Admissions</a></li>
+                        <li><a href="contact.html">Campus Map</a></li>
+                        <li><a href="developers.html">Developers</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h6 class="text-white mb-3">Academics</h6>
+                    <ul class="footer-links">
+                        <li><a href="academics.html">Undergraduate</a></li>
+                        <li><a href="academics.html">Postgraduate</a></li>
+                        <li><a href="news.html">Research</a></li>
+                        <li><a href="facilities.html">Library</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <h6 class="text-white mb-3">Connect</h6>
+                    <div class="social-grid">
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <p class="text-white-50 small mt-3">info@gctbhakkar.edu.pk | +92 (0453) 920000</p>
+                </div>
+            </div>
+            <div class="footer-bottom mt-5 pt-4 border-top border-white-10 text-center">
+                <p>&copy; 2026 GCT Bhakkar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle -->
+    <script src="../js/bootstrapJs/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World-Class Facilities | GCT Bhakkar</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="../css/bootstrapCss/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/facilities.css">
+</head>
+
+<body class="loading">
+
+    <!-- Preloader -->
+    <div class="loader-overlay">
+        <div class="loader-content">
+            <div class="loader-logo">GCT BKR</div>
+            <div class="loader-bar">
+                <div class="bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top premium-nav">
+            <div class="container-fluid px-lg-5">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
+                    <div class="brand-icon"><i class="fa-solid fa-atom"></i></div>
+                    <div class="brand-text">
+                        <span class="block fw-bold display-font">GCT</span>
+                        <span class="block small text-spaced">BHAKKAR</span>
+                    </div>
+                </a>
+
+                <button class="menu-trigger d-lg-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#premiumOffcanvas">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <div class="collapse navbar-collapse d-none d-lg-block">
+                    <ul class="navbar-nav mx-auto align-items-center bg-glass-pill">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="facilities.html">Facilities</a></li>
+                        <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-4">
+                        <button class="theme-switch-wrapper" aria-label="Toggle Dark Mode">
+                            <div class="toggle-track">
+                                <div class="toggle-indicator"></div>
+                                <div class="icon-container-sun"><i class="fa-solid fa-sun sun-icon"></i></div>
+                                <div class="icon-container-moon"><i class="fa-solid fa-moon moon-icon"></i></div>
+                            </div>
+                        </button>
+                        <a href="contact.html" class="btn-premium-cta">
+                            <i class="fa-solid fa-paper-plane me-1"></i>
+                            <span>Apply Now</span>
+                            <div class="btn-shine"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end premium-menu-glass" tabindex="-1" id="premiumOffcanvas">
+        <div class="offcanvas-bg-glow"></div>
+        <div class="offcanvas-header justify-content-between align-items-center p-4">
+            <div class="brand-group text-white">
+                <i class="fa-solid fa-atom fs-2"></i>
+                <span class="fw-bold fs-3 ms-2 font-serif">GCT BKR</span>
+            </div>
+            <button type="button" class="btn-close-custom" data-bs-dismiss="offcanvas">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-center px-5">
+            <ul class="premium-menu-list">
+                <li class="menu-item-reveal"><a href="../index.html" class="menu-link" data-text="Home">Home</a></li>
+                <li class="menu-item-reveal"><a href="about.html" class="menu-link" data-text="About">About</a></li>
+                <li class="menu-item-reveal"><a href="academics.html" class="menu-link"
+                        data-text="Academics">Academics</a></li>
+                <li class="menu-item-reveal"><a href="facilities.html" class="menu-link"
+                        data-text="Facilities">Facilities</a></li>
+                <li class="menu-item-reveal"><a href="news.html" class="menu-link" data-text="News">News</a></li>
+                <li class="menu-item-reveal"><a href="events.html" class="menu-link" data-text="Events">Events</a></li>
+                <li class="menu-item-reveal"><a href="developers.html" class="menu-link"
+                        data-text="Developers">Developers</a></li>
+                <li class="menu-item-reveal"><a href="contact.html" class="menu-link" data-text="Contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 1. Cinematic Hero Section -->
+    <header class="hero-section">
+        <div class="hero-bg-layers">
+            <div class="layer-1"></div> <!-- Abstract shapes -->
+            <div class="layer-2"></div> <!-- Particles -->
+            <div class="layer-gradient"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="badge-pill reveal-down">PREMIUM CAMPUS EXPERIENCE</div>
+            <h1 class="hero-title reveal-up">
+                World-Class <span class="text-gradient">Facilities</span><br>
+                at GCT Bhakkar
+            </h1>
+            <p class="hero-subtitle reveal-up delay-1">
+                Where innovation meets infrastructure. Explore a campus designed for the future of engineering and
+                technology.
+            </p>
+            <div class="hero-actions reveal-up delay-2">
+                <a href="#showcase" class="btn-glow big">
+                    <span>Explore Campus</span>
+                    <i class="fa-solid fa-arrow-down"></i>
+                </a>
+                <a href="#virtual-tour" class="btn-glass">
+                    <i class="fa-solid fa-vr-cardboard"></i>
+                    <span>Virtual Tour</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <span>Scroll to Explore</span>
+        </div>
+    </header>
+
+    <!-- 2. Facilities Showcase (Main Grid) -->
+    <section id="showcase" class="showcase-section">
+        <div class="container">
+            <div class="section-header center-text">
+                <h5 class="sub-heading">CAMPUS INFRASTRUCTURE</h5>
+                <h2 class="main-heading">Engineered for <span class="highlight">Excellence</span></h2>
+            </div>
+
+            <div class="facilities-grid">
+                <!-- 1. Computer Labs -->
+                <div class="facility-card tilt-card" data-tilt>
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1599658880436-c61792770663?q=80&w=800&auto=format&fit=crop"
+                            alt="Computer Labs">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="icon-box"><i class="fa-solid fa-desktop"></i></div>
+                        <h3>Advanced IT Labs</h3>
+                        <p>High-performance workstations equipped with the latest development software and AI tools.</p>
+                        <span class="read-more">View Details</span>
+                    </div>
+                </div>
+
+                <!-- 2. Electronics Workshops -->
+                <div class="facility-card tilt-card" data-tilt>
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1555546419-74d3d7894eb0?q=80&w=800&auto=format&fit=crop"
+                            alt="Electronics">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="icon-box"><i class="fa-solid fa-microchip"></i></div>
+                        <h3>Electronics Workshops</h3>
+                        <p>State-of-the-art circuitry labs, PCB design stations, and testing equipment.</p>
+                        <span class="read-more">View Details</span>
+                    </div>
+                </div>
+
+                <!-- 3. Mechanical Workshops -->
+                <div class="facility-card tilt-card" data-tilt>
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a783?q=80&w=800&auto=format&fit=crop"
+                            alt="Mechanical">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="icon-box"><i class="fa-solid fa-gears"></i></div>
+                        <h3>Mechanical Eng.</h3>
+                        <p>Heavy machinery, CNC units, and hydraulic systems for hands-on industrial training.</p>
+                        <span class="read-more">View Details</span>
+                    </div>
+                </div>
+
+                <!-- 4. Civil Lab -->
+                <div class="facility-card tilt-card" data-tilt>
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=800&auto=format&fit=crop"
+                            alt="Civil Engineering">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="icon-box"><i class="fa-solid fa-helmet-safety"></i></div>
+                        <h3>Civil Laboratory</h3>
+                        <p>Advanced material testing, surveying instruments, and structural analysis tools.</p>
+                        <span class="read-more">View Details</span>
+                    </div>
+                </div>
+
+                <!-- 5. Library -->
+                <div class="facility-card tilt-card" data-tilt>
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=800&auto=format&fit=crop"
+                            alt="Library">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="icon-box"><i class="fa-solid fa-book-open"></i></div>
+                        <h3>Central Library</h3>
+                        <p>A vast repository of technical knowledge, digital journals, and quiet study zones.</p>
+                        <span class="read-more">View Details</span>
+                    </div>
+                </div>
+
+
+                <!-- 6. Mosque -->
+                <div class="facility-card tilt-card" data-tilt>
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1564121211835-e88c852648ab?q=80&w=800&auto=format&fit=crop"
+                            alt="Mosque">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="icon-box"><i class="fa-solid fa-mosque"></i></div>
+                        <h3>Jamia Mosque</h3>
+                        <p>A peaceful, spacious area for prayers and spiritual reflection on campus.</p>
+                        <span class="read-more">View Details</span>
+                    </div>
+                </div>
+
+                <!-- 7. Security -->
+                <div class="facility-card tilt-card" data-tilt>
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1555952517-2e8e729e0b44?q=80&w=800&auto=format&fit=crop"
+                            alt="Security">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3>24/7 Security</h3>
+                        <p>Full camera surveillance and trained personnel ensuring a safe educational environment.</p>
+                        <span class="read-more">View Details</span>
+                    </div>
+                </div>
+
+                <!-- 8. Transport -->
+                <div class="facility-card tilt-card" data-tilt>
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?q=80&w=800&auto=format&fit=crop"
+                            alt="Bus">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="icon-box"><i class="fa-solid fa-bus"></i></div>
+                        <h3>Campus Transport</h3>
+                        <p>Reliable bus services covering all major routes in Bhakkar for students and staff.</p>
+                        <span class="read-more">View Details</span>
+                    </div>
+                </div>
+
+                <!-- 9. Canteen -->
+                <div class="facility-card tilt-card" data-tilt>
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=800&auto=format&fit=crop"
+                            alt="Canteen">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="icon-box"><i class="fa-solid fa-utensils"></i></div>
+                        <h3>Campus Canteen</h3>
+                        <p>Hygienic, affordable, and fresh meals served in a clean dining environment.</p>
+                        <span class="read-more">View Details</span>
+                    </div>
+                </div>
+
+                <!-- 10. Sports -->
+                <div class="facility-card tilt-card" data-tilt>
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop"
+                            alt="Sports">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="icon-box"><i class="fa-solid fa-volleyball"></i></div>
+                        <h3>Sports Complex</h3>
+                        <p>Playgrounds for cricket, football, and volleyball to promote physical fitness.</p>
+                        <span class="read-more">View Details</span>
+                    </div>
+                </div>
+
+                <!-- 11. Parking -->
+                <div class="facility-card tilt-card" data-tilt>
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?q=80&w=800&auto=format&fit=crop"
+                            alt="Parking">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="icon-box"><i class="fa-solid fa-square-parking"></i></div>
+                        <h3>Spacious Parking</h3>
+                        <p>Designated secure parking areas for faculty, students, and visitors.</p>
+                        <span class="read-more">View Details</span>
+                    </div>
+                </div>
+
+                <!-- 12. Eco Friendly -->
+                <div class="facility-card tilt-card" data-tilt>
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=800&auto=format&fit=crop"
+                            alt="Green Campus">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="icon-box"><i class="fa-solid fa-leaf"></i></div>
+                        <h3>Eco-Friendly</h3>
+                        <p>Lush green lawns and tree-lined pathways ensuring a calm learning atmosphere.</p>
+                        <span class="read-more">View Details</span>
+                    </div>
+                </div>
+
+                <!-- 13. Smart Classrooms -->
+                <div class="facility-card tilt-card" data-tilt>
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?q=80&w=800&auto=format&fit=crop"
+                            alt="Classroom">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="icon-box"><i class="fa-solid fa-chalkboard-user"></i></div>
+                        <h3>Smart Classrooms</h3>
+                        <p>Modern lecture halls with multimedia projectors and audio systems.</p>
+                        <span class="read-more">View Details</span>
+                    </div>
+                </div>
+
+                <!-- 14. Medical -->
+                <div class="facility-card tilt-card" data-tilt>
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=800&auto=format&fit=crop"
+                            alt="Medical">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="icon-box"><i class="fa-solid fa-user-doctor"></i></div>
+                        <h3>First Aid Center</h3>
+                        <p>On-campus medical facility to handle health emergencies and basic care.</p>
+                        <span class="read-more">View Details</span>
+                    </div>
+                </div>
+
+                <!-- 15. Seminar Hall -->
+                <div class="facility-card tilt-card" data-tilt>
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=800&auto=format&fit=crop"
+                            alt="Seminar">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="icon-box"><i class="fa-solid fa-users-rectangle"></i></div>
+                        <h3>Conference Hall</h3>
+                        <p>Large auditorium for seminars, workshops, and guest lectures.</p>
+                        <span class="read-more">View Details</span>
+                    </div>
+                </div>
+
+                <!-- 16. Wifi -->
+                <div class="facility-card tilt-card" data-tilt>
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1563770095-39d468f95c83?q=80&w=800&auto=format&fit=crop"
+                            alt="Wifi">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="icon-box"><i class="fa-solid fa-wifi"></i></div>
+                        <h3>Hi-Speed Wi-Fi</h3>
+                        <p>Campus-wide internet connectivity to support digital learning and research.</p>
+                        <span class="read-more">View Details</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Featured Highlight (Split Layout) -->
+    <section class="featured-section">
+        <div class="split-container">
+            <div class="split-image reveal-left">
+                <img src="https://images.unsplash.com/photo-1596496050626-f7267104b2b0?q=80&w=800&auto=format&fit=crop"
+                    alt="Advanced Lab">
+            </div>
+            <div class="split-content reveal-right">
+                <h5 class="sub-heading">SPOTLIGHT</h5>
+                <h2>The Innovation Hub</h2>
+                <p>
+                    Our Advanced Electronics & IT Labs are the heart of GCT Bhakkar's excellence.
+                    Furnished with industrial-grade equipment, they bridge the gap between theoretical knowledge
+                    and practical market demands.
+                </p>
+                <ul class="feature-list">
+                    <li><i class="fa-solid fa-check-circle"></i> Industrial CNC Simulation</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Fiber Optics Training Kits</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Dedicated Robotics Wing</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Safety & Environment -->
+    <section class="trust-section">
+        <div class="trust-bg"></div>
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item reveal-up delay-1">
+                    <div class="trust-icon"><i class="fa-solid fa-shield-cat"></i></div>
+                    <h3>Secure Campus</h3>
+                    <p>Protected by 24/7 surveillance and professional security staff.</p>
+                </div>
+                <div class="trust-item reveal-up delay-2">
+                    <div class="trust-icon"><i class="fa-solid fa-seedling"></i></div>
+                    <h3>Green & Clean</h3>
+                    <p>Promoting sustainability with a plastic-free, lush green environment.</p>
+                </div>
+                <div class="trust-item reveal-up delay-3">
+                    <div class="trust-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                    <h3>Student Care</h3>
+                    <p>Dedicated medical and counseling support for all students.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Call to Action -->
+    <section class="cta-section">
+        <div class="cta-content zoom-in">
+            <h2>Ready to Shape Your Future?</h2>
+            <p>Join the institute that empowers you with the best tools and environment.</p>
+            <a href="../index.html#apply" class="btn-premium-cta" style="padding: 18px 45px; font-size: 1.1rem;">
+                <span>Apply for Admission</span>
+                <i class="fa-solid fa-arrow-right ms-2"></i>
+                <div class="btn-shine"></div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="premium-footer section-padding">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 reveal-up">
+                    <div class="footer-brand mb-4">
+                        <i class="fa-solid fa-atom fs-1 text-gradient"></i>
+                        <span class="fs-2 fw-bold ms-2 font-serif">GCT BKR</span>
+                    </div>
+                    <p class="opacity-50 mb-4">Cultivating technical excellence and ethical leadership since 2008.
+                        Punjab's premier hub for engineering mastery.</p>
+                    <div class="footer-socials d-flex gap-3">
+                        <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 reveal-up delay-1">
+                    <h5 class="footer-title">Explore</h5>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="academics.html">Admissions</a></li>
+                        <li><a href="contact.html">Campus Map</a></li>
+                        <li><a href="developers.html">Developers</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 reveal-up delay-2">
+                    <h5 class="footer-title">Contact Us</h5>
+                    <ul class="footer-contact">
+                        <li><i class="fa-solid fa-location-dot"></i> Darya Khan Road, Bhakkar</li>
+                        <li><i class="fa-solid fa-phone"></i> +92 (0453) 9200123</li>
+                        <li><i class="fa-solid fa-envelope"></i> info@gctbhakkar.edu.pk</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 reveal-up delay-3">
+                    <h5 class="footer-title">Newsletter</h5>
+                    <p class="opacity-50 small mb-3">Subscribe for the latest campus updates.</p>
+                    <div class="footer-newsletter">
+                        <input type="email" placeholder="Email Address">
+                        <button><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="footer-bottom mt-5 pt-4 border-top border-white-10 d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <p class="opacity-50 small">&copy; 2026 GCT Bhakkar. All rights reserved.</p>
+                <div class="footer-legal d-flex gap-4">
+                    <a href="#" class="opacity-50 small">Privacy Policy</a>
+                    <a href="#" class="opacity-50 small">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/bootstrapJs/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/facilities.js"></script>
+</body>
+
+</html>
