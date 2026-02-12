@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /* 1. THEME MANAGER */
     const htmlEl = document.documentElement;
     const toggleBtns = document.querySelectorAll('.theme-switch-wrapper');
-    const savedTheme = localStorage.getItem('theme') || 'light';
+    const savedTheme = localStorage.getItem('theme') || htmlEl.getAttribute('data-theme') || 'light';
     
     // Initialize Theme
     htmlEl.setAttribute('data-theme', savedTheme);
@@ -41,15 +41,118 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000);
     }
 
-    /* 3. HERO SLIDESHOW */
-    const slides = document.querySelectorAll('.hero-slideshow .slide');
-    if(slides.length > 0) {
-        let currentSlide = 0;
-        setInterval(() => {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].classList.add('active');
-        }, 5000);
+    /* 3. HERO CINEMATIC SLIDER LOGIC (REFINED) */
+    const heroBgSlides = document.querySelectorAll('.hero-bg-slide');
+    const heroTextSlides = document.querySelectorAll('.text-slide');
+    const heroCinematicIndicators = document.querySelectorAll('.c-indicator');
+    
+    if(heroBgSlides.length > 0) {
+        let currentCinematicIndex = 0;
+        const cinematicIntervalTime = 6000; // 6 seconds total per slide
+        let cinematicInterval;
+
+        function updateCinematicSlider(index) {
+            // A. FADE OUT CURRENT TEXT
+            if(heroTextSlides.length > 0) {
+                heroTextSlides.forEach(txt => txt.classList.remove('active'));
+            }
+
+            // B. CHANGE BACKGROUND (Transition: 1s)
+            // We do this immediately so background starts fading
+            heroBgSlides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+
+            // C. CHANGE INDICATORS
+            if(heroCinematicIndicators.length) {
+                heroCinematicIndicators.forEach((ind, i) => {
+                    ind.classList.toggle('active', i === index);
+                });
+            }
+
+            // D. FADE IN NEW TEXT (Delayed by 800ms to sync with image appearance)
+            if(heroTextSlides.length > 0) {
+                setTimeout(() => {
+                    heroTextSlides.forEach((txt, i) => {
+                        if(i === index) txt.classList.add('active');
+                    });
+                }, 800); // Wait for background to be mostly visible
+            }
+
+            currentCinematicIndex = index;
+        }
+
+        function nextCinematicSlide() {
+            let next = (currentCinematicIndex + 1) % heroBgSlides.length;
+            updateCinematicSlider(next);
+        }
+
+        // Init
+        // For first load, show text immediately
+        heroBgSlides[0].classList.add('active');
+        if(heroTextSlides.length > 0) heroTextSlides[0].classList.add('active');
+        
+        cinematicInterval = setInterval(nextCinematicSlide, cinematicIntervalTime);
+
+        // Manual Control
+        if(heroCinematicIndicators.length) {
+            heroCinematicIndicators.forEach((ind, i) => {
+                ind.addEventListener('click', () => {
+                    clearInterval(cinematicInterval);
+                    updateCinematicSlider(i);
+                    cinematicInterval = setInterval(nextCinematicSlide, cinematicIntervalTime);
+                });
+            });
+        }
+    }
+    
+    // B. Magnetic Buttons
+    const magneticBtns = document.querySelectorAll('.magnetic-btn');
+    magneticBtns.forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            
+            // Subtle movement (divide by factor to dampen)
+            btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px) scale(1.05)`;
+        });
+        
+        btn.addEventListener('mouseleave', () => {
+            btn.style.transform = 'translate(0, 0) scale(1)';
+        });
+    });
+    
+    // C. Particle Effect (Lightweight)
+    const particleContainer = document.getElementById('heroParticles');
+    if(particleContainer) {
+        for(let i = 0; i < 20; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('particle-dot');
+            
+            // Random positioning
+            const size = Math.random() * 4 + 2; // 2px to 6px
+            dot.style.width = `${size}px`;
+            dot.style.height = `${size}px`;
+            dot.style.left = `${Math.random() * 100}%`;
+            dot.style.top = `${Math.random() * 100}%`;
+            
+            // Random animation delay
+            dot.style.opacity = Math.random() * 0.5 + 0.1;
+            const duration = Math.random() * 10 + 10; // 10s to 20s
+            
+            dot.animate([
+                { transform: 'translate(0, 0)', opacity: 0.1 },
+                { transform: `translate(${Math.random()*100 - 50}px, ${Math.random()*100 - 50}px)`, opacity: 0.8 },
+                { transform: 'translate(0, 0)', opacity: 0.1 }
+            ], {
+                duration: duration * 1000,
+                iterations: Infinity,
+                easing: 'ease-in-out'
+            });
+            
+            particleContainer.appendChild(dot);
+        }
     }
 
     /* 4. NAVBAR SCROLL OPTIMIZATION */
@@ -146,22 +249,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* 8. VIDEO PLAY/PAUSE TOGGLE */
-    const btnPlay = document.querySelector('.btn-play');
+    /* 8. VIDEO MODAL LOGIC */
+    const videoModal = document.getElementById('videoModal');
+    const fullVideo = document.getElementById('fullScreenVideo');
     const bgVideo = document.querySelector('.bg-video');
-    
-    if(btnPlay && bgVideo) {
-        btnPlay.addEventListener('click', () => {
-            if(bgVideo.paused) {
-                bgVideo.play().then(() => {
-                    btnPlay.innerHTML = '<i class="fa-solid fa-pause"></i>';
-                    btnPlay.classList.remove('pulse-animation');
-                }).catch(err => console.log('Video playback failed', err));
-            } else {
-                bgVideo.pause();
-                btnPlay.innerHTML = '<i class="fa-solid fa-play"></i>';
-                btnPlay.classList.add('pulse-animation');
-            }
+
+    if(videoModal && fullVideo) {
+        videoModal.addEventListener('shown.bs.modal', () => {
+             // Pause background loop to save resources
+            if(bgVideo) bgVideo.pause();
+            // Play full video
+            fullVideo.play().catch(err => console.log('Autoplay prevented:', err));
+        });
+
+        videoModal.addEventListener('hidden.bs.modal', () => {
+            // Resume background loop
+            if(bgVideo) bgVideo.play().catch(() => {});
+            // Pause and reset full video
+            fullVideo.pause();
+            fullVideo.currentTime = 0;
         });
     }
 

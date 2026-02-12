@@ -254,15 +254,10 @@
 .dev-socials {
     display: flex;
     gap: 20px;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all 0.4s var(--apple-ease);
-    margin-top: auto;
-}
-
-.dev-card:hover .dev-socials {
     opacity: 1;
     transform: translateY(0);
+    transition: all 0.4s var(--apple-ease);
+    margin-top: auto;
 }
 
 .dev-social-link {

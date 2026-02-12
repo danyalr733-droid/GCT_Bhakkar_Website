@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Technical programs and diplomas offered at GCT Bhakkar.">
+    <title>Programs | GCT BHAKKAR</title>
+    <!-- Bootstrap 5 -->
+    <link href="../css/bootstrapCss/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!-- Loading Overlay -->
+    <div id="loader" class="loader-overlay">
+        <div class="loader-content">
+            <div class="loader-logo">GCT BKR</div>
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top premium-nav">
+            <div class="container-fluid px-lg-5">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
+                    <div class="brand-icon"><i class="fa-solid fa-atom"></i></div>
+                    <div class="brand-text">
+                        <span class="block fw-bold display-font">GCT</span>
+                        <span class="block small text-spaced">BHAKKAR</span>
+                    </div>
+                </a>
+
+                <button class="menu-trigger d-lg-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#premiumOffcanvas">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <div class="collapse navbar-collapse d-none d-lg-block">
+                    <ul class="navbar-nav mx-auto align-items-center bg-glass-pill">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="programs.html">Programs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="facilities.html">Facilities</a></li>
+                        <li class="nav-item"><a class="nav-link" href="news-events.html">News & Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-4">
+                        <!-- Theme Toggle -->
+                        <button class="theme-switch-wrapper" aria-label="Toggle Dark Mode">
+                            <div class="toggle-track">
+                                <div class="toggle-indicator"></div>
+                                <div class="icon-container-sun">
+                                    <i class="fa-solid fa-sun sun-icon"></i>
+                                </div>
+                                <div class="icon-container-moon">
+                                    <i class="fa-solid fa-moon moon-icon"></i>
+                                </div>
+                            </div>
+                        </button>
+                        <!-- CTA -->
+                        <a href="contact.html" class="btn-premium-cta">
+                            <i class="fa-solid fa-paper-plane me-1"></i>
+                            <span>Apply Now</span>
+                            <div class="btn-shine"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end premium-menu-glass" tabindex="-1" id="premiumOffcanvas">
+        <div class="offcanvas-bg-glow"></div>
+        <div class="offcanvas-header justify-content-between align-items-center p-4">
+            <div class="brand-group text-white">
+                <i class="fa-solid fa-atom fs-2"></i>
+                <span class="fw-bold fs-3 ms-2 font-serif">GCT BKR</span>
+            </div>
+            <button type="button" class="btn-close-custom" data-bs-dismiss="offcanvas">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-center px-5">
+            <ul class="premium-menu-list">
+                <li class="menu-item-reveal"><a href="../index.html" class="menu-link" data-text="Home">Home</a></li>
+                <li class="menu-item-reveal"><a href="about.html" class="menu-link" data-text="About">About</a></li>
+                <li class="menu-item-reveal"><a href="programs.html" class="menu-link active"
+                        data-text="Programs">Programs</a></li>
+                <li class="menu-item-reveal"><a href="facilities.html" class="menu-link"
+                        data-text="Facilities">Facilities</a></li>
+                <li class="menu-item-reveal"><a href="news-events.html" class="menu-link" data-text="News & Events">News
+                        & Events</a></li>
+                <li class="menu-item-reveal"><a href="developers.html" class="menu-link"
+                        data-text="Developers">Developers</a></li>
+                <li class="menu-item-reveal"><a href="contact.html" class="menu-link" data-text="Contact">Contact</a>
+                </li>
+            </ul>
+
+            <div class="menu-footer mt-5 pt-4 border-top border-white-10 d-flex flex-column gap-3 menu-item-reveal">
+                <div class="d-flex justify-content-between align-items-center mb-2 px-1">
+                    <span class="text-white-50 small text-uppercase fw-bold letter-spacing-1">Connect With Us</span>
+                    <div class="social-links-mobile">
+                        <a href="#" class="social-link-item"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-link-item"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="social-link-item"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-2 px-1 text-white">
+                    <span class="small text-uppercase fw-bold letter-spacing-1">Theme Preference</span>
+                    <button class="theme-switch-wrapper mobile-theme-switch" aria-label="Toggle Dark Mode Mobile">
+                        <div class="toggle-track">
+                            <div class="toggle-indicator"></div>
+                            <div class="icon-container-sun">
+                                <i class="fa-solid fa-sun sun-icon"></i>
+                            </div>
+                            <div class="icon-container-moon">
+                                <i class="fa-solid fa-moon moon-icon"></i>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+                <a href="contact.html" class="btn-premium-cta w-100 justify-content-center mt-3">Start Application</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Upgraded Hero Section with Blurred Slideshow -->
+        <section class="hero-section" style="height: 75vh; min-height: 550px;">
+            <div class="hero-slideshow">
+                <div class="slide active"
+                    style="background-image: url('../assets/img/front\ 3.jpeg'); animation: kenBurns 20s infinite alternate;">
+                </div>
+                <div class="slide"
+                    style="background-image: url('../assets/img/college\ build\ .jpg'); animation: kenBurns 20s infinite alternate;">
+                </div>
+                <div class="slide"
+                    style="background-image: url('../assets/img/front\ 2.jpeg'); animation: kenBurns 20s infinite alternate;">
+                </div>
+            </div>
+            <!-- Glassy Blur Overlay -->
+            <div class="position-absolute inset-0 z-1"
+                style="backdrop-filter: blur(15px) saturate(150%); background: rgba(0,0,0,0.4);"></div>
+            <div class="hero-overlay-gradient"></div>
+
+            <div
+                class="container position-relative z-2 h-100 d-flex flex-column justify-content-center align-items-center text-center">
+                <div class="reveal-zoom">
+                    <h5 class="section-tag text-white-50 mb-4" style="letter-spacing: 8px;">GCT BHAKKAR PROGRAMS</h5>
+                    <h1 class="hero-title animate-text mb-3" style="font-size: clamp(3.5rem, 8vw, 6rem);">Technical
+                        <span class="text-gradient">Innovations.</span>
+                    </h1>
+                    <div class="glass-pill-title mx-auto reveal-up delay-1"
+                        style="max-width: fit-content; padding: 10px 30px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; backdrop-filter: blur(20px);">
+                        <p class="hero-subtitle mb-0 fs-5 text-white">Shaping the engineering landscape of Pakistan
+                            since decades.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Luxury Program Cards -->
+        <section class="section-padding bg-paper overflow-hidden">
+            <div class="container">
+                <div class="text-center mb-5 reveal-up">
+                    <h5 class="section-tag">OUR EXPERTISE</h5>
+                    <h2 class="section-heading">Detailed <span class="serif-italic">Disciplines</span></h2>
+                    <p class="text-muted mx-auto" style="max-width: 700px;">Explore our specialized 3-year Diploma
+                        programs, designed to produce industry-ready professionals with hands-on technical proficiency.
+                    </p>
+                </div>
+
+                <div class="row g-5">
+                    <!-- Electrical Technology -->
+                    <div class="col-lg-6 reveal-left">
+                        <div class="program-card-luxury group">
+                            <div class="pc-image-wrapper">
+                                <img src="../assets/img/electrical.jpeg" alt="Electrical" class="pc-image">
+                                <div class="pc-overlay"></div>
+                                <div class="pc-badge">DAE Electrical</div>
+                            </div>
+                            <div class="pc-content">
+                                <div class="d-flex align-items-center gap-3 mb-3">
+                                    <div class="pc-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+                                    <h3 class="h4 fw-bold mb-0">Electrical Technology</h3>
+                                </div>
+                                <p class="text-muted small mb-4 text-reveal">Master high-voltage systems, industrial
+                                    automation, and
+                                    smart grid integration in our state-of-the-art power labs.</p>
+                                <div class="pc-features reveal-zoom delay-1">
+                                    <span><i class="fa-solid fa-microchip me-1"></i> Power Systems</span>
+                                    <span><i class="fa-solid fa-plug-circle-bolt me-1"></i> PLC Control</span>
+                                    <span><i class="fa-solid fa-house-signal me-1"></i> Smart Wiring</span>
+                                </div>
+                                <a href="contact.html" class="explore-link mt-4">Inquire Now <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Civil Technology -->
+                    <div class="col-lg-6 reveal-right delay-1">
+                        <div class="program-card-luxury group">
+                            <div class="pc-image-wrapper">
+                                <img src="../assets/img/civil.jpeg" alt="Civil" class="pc-image">
+                                <div class="pc-overlay"></div>
+                                <div class="pc-badge">DAE Civil</div>
+                            </div>
+                            <div class="pc-content">
+                                <div class="d-flex align-items-center gap-3 mb-3">
+                                    <div class="pc-icon"><i class="fa-solid fa-mountain-city"></i></div>
+                                    <h3 class="h4 fw-bold mb-0">Civil Technology</h3>
+                                </div>
+                                <p class="text-muted small mb-4 text-reveal">Learn advanced structural analysis,
+                                    environmental
+                                    engineering, and sustainable urban planning with site-based training.</p>
+                                <div class="pc-features reveal-zoom delay-2">
+                                    <span><i class="fa-solid fa-compass-drafting me-1"></i> Surveying</span>
+                                    <span><i class="fa-solid fa-trowel-bricks me-1"></i> Structural</span>
+                                    <span><i class="fa-solid fa-road me-1"></i> Highway Eng.</span>
+                                </div>
+                                <a href="contact.html" class="explore-link mt-4">Inquire Now <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mechanical Technology -->
+                    <div class="col-lg-6 reveal-left">
+                        <div class="program-card-luxury group">
+                            <div class="pc-image-wrapper">
+                                <img src="../assets/img/mechanical.jpeg" alt="Mechanical" class="pc-image">
+                                <div class="pc-overlay"></div>
+                                <div class="pc-badge">DAE Mechanical</div>
+                            </div>
+                            <div class="pc-content">
+                                <div class="d-flex align-items-center gap-3 mb-3">
+                                    <div class="pc-icon"><i class="fa-solid fa-gears"></i></div>
+                                    <h3 class="h4 fw-bold mb-0">Mechanical Technology</h3>
+                                </div>
+                                <p class="text-muted small mb-4 text-reveal">The core of manufacturing. Intensive
+                                    training in
+                                    CAD/CAM design, thermodynamics, and precision heavy machining.</p>
+                                <div class="pc-features reveal-zoom delay-1">
+                                    <span><i class="fa-solid fa-robot me-1"></i> CNC Machining</span>
+                                    <span><i class="fa-solid fa-cube me-1"></i> 3D Modeling</span>
+                                    <span><i class="fa-solid fa-fire-burner me-1"></i> Thermo Eng.</span>
+                                </div>
+                                <a href="contact.html" class="explore-link mt-4">Inquire Now <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CIT Technology -->
+                    <div class="col-lg-6 reveal-right delay-1">
+                        <div class="program-card-luxury group">
+                            <div class="pc-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&auto=format&fit=crop"
+                                    alt="CIT" class="pc-image">
+                                <div class="pc-overlay"></div>
+                                <div class="pc-badge">DAE CIT</div>
+                            </div>
+                            <div class="pc-content">
+                                <div class="d-flex align-items-center gap-3 mb-3">
+                                    <div class="pc-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                                    <h3 class="h4 fw-bold mb-0">Information Tech</h3>
+                                </div>
+                                <p class="text-muted small mb-4 text-reveal">Bridge the gap between software and
+                                    hardware. Focus on
+                                    full-stack development, cyber security, and network systems.</p>
+                                <div class="pc-features reveal-zoom delay-1">
+                                    <span><i class="fa-solid fa-code me-1"></i> Web Dev</span>
+                                    <span><i class="fa-solid fa-network-wired me-1"></i> Networking</span>
+                                    <span><i class="fa-solid fa-shield-halved me-1"></i> Security</span>
+                                </div>
+                                <a href="contact.html" class="explore-link mt-4">Inquire Now <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Electronics Technology -->
+                    <div class="col-lg-6 mx-auto reveal-up delay-1">
+                        <div class="program-card-luxury group">
+                            <div class="pc-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop"
+                                    alt="Electronics" class="pc-image">
+                                <div class="pc-overlay"></div>
+                                <div class="pc-badge">DAE Electronics</div>
+                            </div>
+                            <div class="pc-content">
+                                <div class="d-flex align-items-center gap-3 mb-3">
+                                    <div class="pc-icon"><i class="fa-solid fa-microchip"></i></div>
+                                    <h3 class="h4 fw-bold mb-0">Electronics Technology</h3>
+                                </div>
+                                <p class="text-muted small mb-4">The digital heartbeat of modern life. Comprehensive
+                                    study of microprocessors, telecomm, and digital logic circuits.</p>
+                                <div class="pc-features reveal-zoom delay-1">
+                                    <span><i class="fa-solid fa-wave-square me-1"></i> Analog Dev</span>
+                                    <span><i class="fa-solid fa-satellite-dish me-1"></i> Telecom</span>
+                                    <span><i class="fa-solid fa-diagram-project me-1"></i> Logic Design</span>
+                                </div>
+                                <a href="contact.html" class="explore-link mt-4">Inquire Now <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Short Courses Section -->
+                <div class="mt-5 pt-5">
+                    <div class="text-center mb-5 reveal-up">
+                        <h5 class="section-tag">VOCATIONAL SKILLS</h5>
+                        <h2 class="section-heading">Short <span class="serif-italic">Courses</span></h2>
+                        <p class="text-muted mx-auto" style="max-width: 600px;">Accelerate your career with our
+                            specialized short-duration vocational training programs.</p>
+                    </div>
+
+                    <div class="row g-4">
+                        <!-- Shuttring -->
+                        <div class="col-md-6 col-lg-4 reveal-up">
+                            <div class="short-course-card">
+                                <div class="sc-image-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=800&auto=format&fit=crop"
+                                        alt="Shuttring" class="sc-image">
+                                    <div class="sc-badge">Vocational</div>
+                                </div>
+                                <div class="sc-content">
+                                    <div class="sc-icon-circle"><i class="fa-solid fa-trowel-bricks"></i></div>
+                                    <span class="sc-duration-tag">6 Months</span>
+                                    <div class="sc-info">
+                                        <h4>Shuttring</h4>
+                                        <p class="text-muted small mb-0">Concrete formwork and structural support
+                                            training.</p>
+                                        <a href="contact.html" class="explore-link mt-3">Inquire Now <i
+                                                class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Painter -->
+                        <div class="col-md-6 col-lg-4 reveal-up delay-1">
+                            <div class="short-course-card">
+                                <div class="sc-image-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1589939705384-5185138a04b9?q=80&w=800&auto=format&fit=crop"
+                                        alt="Painter" class="sc-image">
+                                    <div class="sc-badge">Vocational</div>
+                                </div>
+                                <div class="sc-content">
+                                    <div class="sc-icon-circle"><i class="fa-solid fa-paint-roller"></i></div>
+                                    <span class="sc-duration-tag">6 Months</span>
+                                    <div class="sc-info">
+                                        <h4>Professional Painter</h4>
+                                        <p class="text-muted small mb-0">Advanced surface finishing and decorative
+                                            techniques.</p>
+                                        <a href="contact.html" class="explore-link mt-3">Inquire Now <i
+                                                class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Plumber -->
+                        <div class="col-md-6 col-lg-4 reveal-up delay-2">
+                            <div class="short-course-card">
+                                <div class="sc-image-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1517646281694-8e4951446664?q=80&w=800&auto=format&fit=crop"
+                                        alt="Plumber" class="sc-image">
+                                    <div class="sc-badge">Vocational</div>
+                                </div>
+                                <div class="sc-content">
+                                    <div class="sc-icon-circle"><i class="fa-solid fa-faucet-drip"></i></div>
+                                    <span class="sc-duration-tag">6 Months</span>
+                                    <div class="sc-info">
+                                        <h4>Plumber</h4>
+                                        <p class="text-muted small mb-0">Industrial and domestic piping systems
+                                            maintenance.</p>
+                                        <a href="contact.html" class="explore-link mt-3">Inquire Now <i
+                                                class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Computer Course 1 -->
+                        <div class="col-md-6 col-lg-4 reveal-up delay-3">
+                            <div class="short-course-card">
+                                <div class="sc-image-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop"
+                                        alt="Computer Apps" class="sc-image">
+                                    <div class="sc-badge">IT Skills</div>
+                                </div>
+                                <div class="sc-content">
+                                    <div class="sc-icon-circle"><i class="fa-solid fa-laptop-code"></i></div>
+                                    <span class="sc-duration-tag">3 Months</span>
+                                    <div class="sc-info">
+                                        <h4>Computer Apps</h4>
+                                        <p class="text-muted small mb-0">Essential office automation and digital
+                                            literacy.</p>
+                                        <a href="contact.html" class="explore-link mt-3">Inquire Now <i
+                                                class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Computer Course 2 -->
+                        <div class="col-md-6 col-lg-4 reveal-up delay-4">
+                            <div class="short-course-card">
+                                <div class="sc-image-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=800&auto=format&fit=crop"
+                                        alt="Web Design" class="sc-image">
+                                    <div class="sc-badge">IT Skills</div>
+                                </div>
+                                <div class="sc-content">
+                                    <div class="sc-icon-circle"><i class="fa-solid fa-code"></i></div>
+                                    <span class="sc-duration-tag">3 Months</span>
+                                    <div class="sc-info">
+                                        <h4>Web Designing</h4>
+                                        <p class="text-muted small mb-0">Creating modern, responsive website interfaces.
+                                        </p>
+                                        <a href="contact.html" class="explore-link mt-3">Inquire Now <i
+                                                class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Computer Course 3 -->
+                        <div class="col-md-6 col-lg-4 reveal-up delay-5">
+                            <div class="short-course-card">
+                                <div class="sc-image-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=800&auto=format&fit=crop"
+                                        alt="Graphic Design" class="sc-image">
+                                    <div class="sc-badge">IT Skills</div>
+                                </div>
+                                <div class="sc-content">
+                                    <div class="sc-icon-circle"><i class="fa-solid fa-palette"></i></div>
+                                    <span class="sc-duration-tag">3 Months</span>
+                                    <div class="sc-info">
+                                        <h4>Graphic Design</h4>
+                                        <p class="text-muted small mb-0">Visual communication and brand identity assets.
+                                        </p>
+                                        <a href="contact.html" class="explore-link mt-3">Inquire Now <i
+                                                class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-premium">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <div class="brand-icon-sm"><i class="fa-solid fa-atom"></i></div>
+                        <span class="h4 text-white font-serif mb-0">GCT Bhakkar</span>
+                    </div>
+                    <p class="text-white-50">Empowering technical leadership since decades. Join Pakistan's premier
+                        diploma college today.</p>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h6 class="text-white mb-3">Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="news-events.html">News & Events</a></li>
+                        <li><a href="programs.html">DAE Programs</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h6 class="text-white mb-3">Resources</h6>
+                    <ul class="footer-links">
+                        <li><a href="facilities.html">Campus Labs</a></li>
+                        <li><a href="developers.html">CIT Developers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <h6 class="text-white mb-3">Connect</h6>
+                    <div class="social-grid">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <p class="text-white-50 small mt-3">info@gctbhakkar.edu.pk | +92 453 920000</p>
+                </div>
+            </div>
+            <div class="footer-bottom mt-5 pt-4 border-top border-white-10 text-center">
+                <p>&copy; 2026 GCT Bhakkar. All Rights Reserved. Crafted with <i class="fas fa-heart text-danger"></i>
+                    by <a href="developers.html">CIT Developers</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle -->
+    <script src="../js/bootstrapJs/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,540 @@
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Events | GCT Bhakkar</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrapCss/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!-- Custom Loader -->
+    <div id="loader" class="loader-overlay">
+        <div class="loader-content">
+            <div class="loader-logo font-serif text-white">GCT</div>
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top premium-nav">
+            <div class="container-fluid px-lg-5">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
+                    <div class="brand-icon"><i class="fa-solid fa-atom"></i></div>
+                    <div class="brand-text">
+                        <span class="block fw-bold display-font">GCT</span>
+                        <span class="block small text-spaced">BHAKKAR</span>
+                    </div>
+                </a>
+
+                <button class="menu-trigger d-lg-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#premiumOffcanvas">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <div class="collapse navbar-collapse d-none d-lg-block">
+                    <ul class="navbar-nav mx-auto align-items-center bg-glass-pill">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="news-events.html">News & Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="facilities.html">Facilities</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-4">
+                        <button class="theme-switch-wrapper" aria-label="Toggle Dark Mode">
+                            <div class="toggle-track">
+                                <div class="toggle-indicator"></div>
+                                <div class="icon-container-sun"><i class="fa-solid fa-sun sun-icon"></i></div>
+                                <div class="icon-container-moon"><i class="fa-solid fa-moon moon-icon"></i></div>
+                            </div>
+                        </button>
+                        <a href="contact.html" class="btn-premium-cta">
+                            <i class="fa-solid fa-paper-plane me-1"></i>
+                            <span>Apply Now</span>
+                            <div class="btn-shine"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end premium-menu-glass" tabindex="-1" id="premiumOffcanvas">
+        <div class="offcanvas-bg-glow"></div>
+        <div class="offcanvas-header justify-content-between align-items-center p-4">
+            <div class="brand-group text-white">
+                <i class="fa-solid fa-atom fs-2"></i>
+                <span class="fw-bold fs-3 ms-2 font-serif">GCT BKR</span>
+            </div>
+            <button type="button" class="btn-close-custom" data-bs-dismiss="offcanvas">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-center px-5">
+            <ul class="premium-menu-list">
+                <li class="menu-item-reveal"><a href="../index.html" class="menu-link" data-text="Home">Home</a></li>
+                <li class="menu-item-reveal"><a href="about.html" class="menu-link" data-text="About">About</a></li>
+                <li class="menu-item-reveal"><a href="news-events.html" class="menu-link active"
+                        data-text="News & Events">News & Events</a></li>
+                <li class="menu-item-reveal"><a href="programs.html" class="menu-link" data-text="Programs">Programs</a>
+                </li>
+                <li class="menu-item-reveal"><a href="facilities.html" class="menu-link"
+                        data-text="Facilities">Facilities</a></li>
+                <li class="menu-item-reveal"><a href="developers.html" class="menu-link"
+                        data-text="Developers">Developers</a></li>
+                <li class="menu-item-reveal"><a href="contact.html" class="menu-link" data-text="Contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section with Ken Burns -->
+        <section class="hero-section" style="height: 75vh; min-height: 550px;">
+            <div class="hero-slideshow">
+                <div class="slide active"
+                    style="background-image: url('../assets/img/colage watsap .jpg'); animation: kenBurns 20s infinite alternate;">
+                </div>
+                <div class="slide" style="background-image: url('../assets/img/phol wali collage.jpeg');"></div>
+            </div>
+            <div class="hero-overlay-gradient"></div>
+            <div
+                class="container position-relative z-2 h-100 d-flex flex-column justify-content-center align-items-center text-center">
+                <h5 class="section-tag text-white-50 reveal-up" style="letter-spacing: 5px;">STAY CONNECTED</h5>
+                <h1 class="hero-title animate-text" style="font-size: clamp(3rem, 8vw, 5.5rem);">News & <span
+                        class="text-gradient">Events.</span></h1>
+                <p class="hero-subtitle animate-text delay-1 fs-4 opacity-75">Every headline, every event, every
+                    milestone. One place.</p>
+
+                <div class="mt-5 animate-text delay-3">
+                    <a href="#news-hub" class="btn-glass-large">
+                        <i class="fa-solid fa-newspaper me-2"></i> Explore News & Events
+                    </a>
+                </div>
+
+                <!-- Premium Hub Switcher -->
+                <div class="hub-switcher-container mt-5 animate-text delay-4">
+                    <div class="hub-switcher glass-container p-1 d-inline-flex">
+                        <button class="hub-btn active" data-target="news-hub">
+                            <i class="fa-solid fa-newspaper me-2"></i> Latest News
+                        </button>
+                        <button class="hub-btn" data-target="events-hub">
+                            <i class="fa-solid fa-calendar-days me-2"></i> Event Calendar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Live News Ticker -->
+            <div class="news-ticker-bar">
+                <div class="ticker-wrapper">
+                    <div class="ticker-item"><i class="fa-solid fa-bolt-lightning"></i> Admissions open for Session
+                        2026-27</div>
+                    <div class="ticker-item"><i class="fa-solid fa-star"></i> CIT Department secures 1st position in
+                        Provincial Coding Shield</div>
+                    <div class="ticker-item"><i class="fa-solid fa-trophy"></i> Annual Sports Gala scheduled for next
+                        month</div>
+                    <div class="ticker-item"><i class="fa-solid fa-microchip"></i> New Robotics Lab inauguration on
+                        Monday</div>
+                    <!-- Duplicate for infinite scroll -->
+                    <div class="ticker-item"><i class="fa-solid fa-bolt-lightning"></i> Admissions open for Session
+                        2026-27</div>
+                    <div class="ticker-item"><i class="fa-solid fa-star"></i> CIT Department secures 1st position in
+                        Provincial Coding Shield</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Integrated Content Sections -->
+        <div class="hub-sections section-padding bg-paper overflow-hidden">
+            <div class="container">
+                <!-- Latest News Section -->
+                <div id="news-hub" class="hub-content active">
+                    <div class="text-center mb-5 reveal-up">
+                        <h5 class="section-tag">NEWSFEED</h5>
+                        <h2 class="section-heading">Featured <span class="serif-italic">Stories</span></h2>
+                    </div>
+
+                    <!-- Featured Spotlight -->
+                    <div class="row mb-5">
+                        <div class="col-12 reveal-up">
+                            <div class="featured-news-card tilt-card">
+                                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200"
+                                    alt="Featured" class="featured-news-bg">
+                                <div class="featured-news-overlay">
+                                    <span class="badge bg-accent mb-3">MAJOR UPDATE</span>
+                                    <h2 class="display-4 text-white fw-bold mb-3">Transforming Technical Education: The
+                                        2026
+                                        Vision</h2>
+                                    <p class="text-white-50 fs-5 mb-4 max-w-600">GCT Bhakkar has officially partnered
+                                        with
+                                        global tech leaders to integrate industry-standard certifications into the core
+                                        DAE
+                                        curriculum.</p>
+                                    <div class="d-flex align-items-center gap-4">
+                                        <a href="#" class="btn-premium-cta">Read Masterplan</a>
+                                        <span class="text-white-50 small"><i class="fa-regular fa-clock me-1"></i> 8 min
+                                            read</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category Filters -->
+                    <div class="category-filters reveal-up">
+                        <button class="cat-btn active" data-filter="all">All News</button>
+                        <button class="cat-btn" data-filter="academic">Academic</button>
+                        <button class="cat-btn" data-filter="campus">Campus Life</button>
+                        <button class="cat-btn" data-filter="tech">Dept. Updates</button>
+                        <button class="cat-btn" data-filter="admin">Notifications</button>
+                    </div>
+                    <div class="row g-4">
+                        <!-- News items from news.html -->
+                        <div class="col-md-6 col-lg-4 reveal-up news-item" data-category="tech">
+                            <div class="event-card-lg tilt-card h-100 bg-surface shadow-premium">
+                                <div class="event-thumb">
+                                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600"
+                                        alt="News">
+                                    <div class="thumb-badge">Facility</div>
+                                </div>
+                                <div class="event-content p-4">
+                                    <span class="text-accent small fw-bold text-uppercase mb-2 d-block">Feb 05,
+                                        2026</span>
+                                    <h4>New Tech Lab Inauguration</h4>
+                                    <p class="text-muted small">Our state-of-the-art computer lab is now open for
+                                        students with AI workstations.</p>
+                                    <a href="#" class="explore-link mt-3">Read Full Story <i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 reveal-up delay-1 news-item" data-category="academic">
+                            <div class="event-card-lg tilt-card h-100 bg-surface shadow-premium">
+                                <div class="event-thumb">
+                                    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=600"
+                                        alt="News">
+                                    <div class="thumb-badge">Achievement</div>
+                                </div>
+                                <div class="event-content p-4">
+                                    <span class="text-accent small fw-bold text-uppercase mb-2 d-block">Jan 28,
+                                        2026</span>
+                                    <h4>Regional Tech Fest Winners</h4>
+                                    <p class="text-muted small">Our students secured first position in the regional
+                                        project competition.</p>
+                                    <a href="#" class="explore-link mt-3">Read Full Story <i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 reveal-up delay-2 news-item" data-category="campus">
+                            <div class="event-card-lg tilt-card h-100 bg-surface shadow-premium">
+                                <div class="event-thumb">
+                                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=600"
+                                        alt="News">
+                                    <div class="thumb-badge">Campus</div>
+                                </div>
+                                <div class="event-content p-4">
+                                    <span class="text-accent small fw-bold text-uppercase mb-2 d-block">Jan 15,
+                                        2026</span>
+                                    <h4>Annual Sports Gala Recap</h4>
+                                    <p class="text-muted small">Highlights from our thrilling annual sports event
+                                        capturing the competitive spirit.</p>
+                                    <a href="#" class="explore-link mt-3">Read Full Story <i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Events Hub Section (Timeline Roadmap) -->
+                <div id="events-hub" class="hub-content d-none">
+                    <div class="text-center mb-5">
+                        <h5 class="section-tag">ANNUAL ROADMAP</h5>
+                        <h2 class="section-heading">Strategic <span class="serif-italic">Milestones</span></h2>
+                    </div>
+
+                    <div class="timeline-wrapper">
+                        <!-- Milestone 1 -->
+                        <div class="timeline-item reveal-left">
+                            <div class="timeline-dot"></div>
+                            <div class="glass-container p-4 tilt-card shadow-premium">
+                                <span class="text-accent fw-bold small">SEPTEMBER 2026</span>
+                                <h4 class="mt-2 text-white">New Academic Session</h4>
+                                <p class="text-white-50 small">Welcome week and orientation for fresh DAE students
+                                    across all departments.</p>
+                                <div class="d-flex align-items-center mt-3 gap-3">
+                                    <span class="badge bg-light text-dark border"><i
+                                            class="fa-solid fa-graduation-cap me-1"></i> Academic</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Milestone 2 -->
+                        <div class="timeline-item reveal-right text-md-end">
+                            <div class="timeline-dot"></div>
+                            <div class="glass-container p-4 tilt-card shadow-premium ms-auto" style="max-width: 500px;">
+                                <span class="text-accent fw-bold small">NOVEMBER 2026</span>
+                                <h4 class="mt-2 text-white">Tech-Nova exhibition</h4>
+                                <p class="text-white-50 small">Showcasing innovative engineering projects and automated
+                                    solutions developed by GCT students.</p>
+                                <div class="d-flex align-items-center justify-content-md-end mt-3 gap-3">
+                                    <span class="badge bg-light text-dark border"><i
+                                            class="fa-solid fa-microchip me-1"></i> Engineering</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Milestone 3 -->
+                        <div class="timeline-item reveal-left">
+                            <div class="timeline-dot"></div>
+                            <div class="glass-container p-4 tilt-card shadow-premium">
+                                <span class="text-accent fw-bold small">JANUARY 2027</span>
+                                <h4 class="mt-2 text-white">Annual Sports Festival</h4>
+                                <p class="text-white-50 small">A week of intense competition, athletic spirit, and
+                                    inter-departmental sportsmanship.</p>
+                                <div class="d-flex align-items-center mt-3 gap-3">
+                                    <span class="badge bg-light text-dark border"><i
+                                            class="fa-solid fa-trophy me-1"></i> Sports</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Milestone 4 -->
+                        <div class="timeline-item reveal-right text-md-end">
+                            <div class="timeline-dot"></div>
+                            <div class="glass-container p-4 tilt-card shadow-premium ms-auto" style="max-width: 500px;">
+                                <span class="text-accent fw-bold small">MARCH 2027</span>
+                                <h4 class="mt-2 text-white">Career Placement Drive</h4>
+                                <p class="text-white-50 small">Top industrial partners visiting for campus recruitment
+                                    and industry-academia linkup.</p>
+                                <div class="d-flex align-items-center justify-content-md-end mt-3 gap-3">
+                                    <span class="badge bg-light text-dark border"><i
+                                            class="fa-solid fa-briefcase me-1"></i> Professional</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <!-- Anthology Section (Gallery from events.html) -->
+        <section class="section-padding bg-body overflow-hidden">
+            <div class="container">
+                <div class="text-center mb-5 reveal-up">
+                    <h5 class="section-tag">VISUAL STORY</h5>
+                    <h2 class="section-heading">Campus <span class="serif-italic">Archives</span></h2>
+                </div>
+                <div class="masonry-grid reveal-up">
+                    <div class="masonry-item tall">
+                        <img src="../assets/img/phol.jpeg" alt="Gallery" class="masonry-img">
+                        <div class="gallery-overlay p-4 d-flex flex-column justify-content-end">
+                            <h3 class="text-white mb-0 h4">Botanical Exhibition</h3>
+                        </div>
+                    </div>
+                    <div class="masonry-item wide">
+                        <img src="../assets/img/front 3.jpeg" alt="Gallery" class="masonry-img">
+                        <div class="gallery-overlay p-4 d-flex flex-column justify-content-end">
+                            <h4 class="text-white mb-0">Morning Discipline</h4>
+                        </div>
+                    </div>
+                    <div class="masonry-item">
+                        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=600" alt="Gallery"
+                            class="masonry-img">
+                        <div class="gallery-overlay p-4 d-flex flex-column justify-content-end">
+                            <h4 class="text-white mb-0">Sports Spirits</h4>
+                        </div>
+                    </div>
+                    <div class="masonry-item">
+                        <img src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=600" alt="Gallery"
+                            class="masonry-img">
+                        <div class="gallery-overlay p-4 d-flex flex-column justify-content-end">
+                            <h4 class="text-white mb-0">Tech Lab Life</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alumni Section (from news.html) -->
+        <section class="section-padding bg-paper">
+            <div class="container">
+                <div class="text-center mb-5 reveal-up">
+                    <h5 class="section-tag">TESTIMONIALS</h5>
+                    <h2 class="section-heading">Alumni <span class="serif-italic">Success</span></h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 reveal-up">
+                        <div class="faculty-card glass-container p-4 text-center border-0" style="border-radius: 30px;">
+                            <div class="faculty-img mb-3 mx-auto"
+                                style="width: 120px; height: 120px; border: 3px solid var(--accent); border-radius: 50%; overflow: hidden; padding: 4px;">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400"
+                                    alt="Alumni" class="w-100 h-100 object-fit-cover rounded-circle">
+                            </div>
+                            <h4>Michael Chang</h4>
+                            <p class="text-muted small">"GCT's hands-on labs were the launchpad for my tech
+                                startup."
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 reveal-up delay-1">
+                        <div class="faculty-card glass-container p-4 text-center border-0" style="border-radius: 30px;">
+                            <div class="faculty-img mb-3 mx-auto"
+                                style="width: 120px; height: 120px; border: 3px solid var(--accent); border-radius: 50%; overflow: hidden; padding: 4px;">
+                                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=400"
+                                    alt="Alumni" class="w-100 h-100 object-fit-cover rounded-circle">
+                            </div>
+                            <h4>Sarah Jenkins</h4>
+                            <p class="text-muted small">"Mentorship at GCT turned my engineering passion into a
+                                career."
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 reveal-up delay-2">
+                        <div class="faculty-card glass-container p-4 text-center border-0" style="border-radius: 30px;">
+                            <div class="faculty-img mb-3 mx-auto"
+                                style="width: 120px; height: 120px; border: 3px solid var(--accent); border-radius: 50%; overflow: hidden; padding: 4px;">
+                                <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=400"
+                                    alt="Alumni" class="w-100 h-100 object-fit-cover rounded-circle">
+                            </div>
+                            <h4>David Okonjo</h4>
+                            <p class="text-muted small">"The innovation culture here is real. Highly recommended."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Newsletter Subscription -->
+        <section class="section-padding overflow-hidden">
+            <div class="container">
+                <div class="glass-container p-5 text-center reveal-zoom shadow-premium"
+                    style="border-radius: 50px; background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.1), rgba(var(--bg-card-rgb), 0.8));">
+                    <div class="max-w-600 mx-auto">
+                        <h5 class="text-accent fw-bold mb-3">NEWSLETTER</h5>
+                        <h2 class="display-5 fw-bold mb-4 text-white">Never miss a <span
+                                class="serif-italic text-accent">beat.</span></h2>
+                        <p class="text-white-50 mb-5">Subscribe to our monthly digest and get campus news directly in
+                            your inbox.</p>
+                        <form class="d-flex flex-column flex-md-row gap-3">
+                            <input type="email" class="form-control glass-input flex-grow-1"
+                                placeholder="Your academic email..." required>
+                            <button type="submit" class="btn-premium-cta px-5">Join Digest</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-premium">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="brand-group text-white mb-3">
+                        <i class="fa-solid fa-atom fs-3 me-2"></i>
+                        <span class="h4 font-serif">GCT Bhakkar</span>
+                    </div>
+                    <p class="text-white-50">Empowering future leaders with technical excellence and innovative
+                        thinking.</p>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <h6 class="text-white mb-3">Explore</h6>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="news-events.html">News & Events</a></li>
+                        <li><a href="programs.html">DAE Programs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-4 ms-auto">
+                    <h6 class="text-white mb-3">Social Pulse</h6>
+                    <div class="social-grid">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <p class="text-white-50 mt-3">© 2026 GCT Bhakkar. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/bootstrapJs/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+        // Hub Switcher Logic
+        document.querySelectorAll('.hub-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const target = btn.getAttribute('data-target');
+
+                // Toggle Buttons
+                document.querySelectorAll('.hub-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Toggle Sections
+                document.querySelectorAll('.hub-content').forEach(content => {
+                    content.classList.add('d-none');
+                    content.classList.remove('active');
+                    if (content.id === target) {
+                        content.classList.remove('d-none');
+                        setTimeout(() => content.classList.add('active'), 50);
+                    }
+                });
+            });
+        });
+
+        // Initialize Hero Slideshow
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slideshow .slide');
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+            slides[currentSlide].style.animation = 'kenBurns 20s infinite alternate';
+        }, 6000);
+
+        // Category Filtering Logic
+        document.querySelectorAll('.cat-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.getAttribute('data-filter');
+                document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                document.querySelectorAll('.news-item').forEach(item => {
+                    const category = item.getAttribute('data-category');
+                    if (filter === 'all' || category === filter) {
+                        item.style.display = 'block';
+                        setTimeout(() => item.classList.add('active'), 50);
+                    } else {
+                        item.classList.remove('active');
+                        setTimeout(() => item.style.display = 'none', 300);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
