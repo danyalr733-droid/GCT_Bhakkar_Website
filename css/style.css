@@ -81,7 +81,7 @@
   --card-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
   --nav-bg: rgba(255, 255, 255, 0.7);
   --cta-glow: rgba(0, 86, 179, 0.4);
-  --toggle-bg: #eef2f5;
+  --toggle-bg: #d1d1d1;
   --toggle-shadow: var(--toggle-shadow-light);
   --sun-color: #ffa500;
   --moon-color: #333;
@@ -91,7 +91,11 @@
 html {
   scroll-behavior: smooth;
   font-size: var(--root-font-size);
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  width: 100%;
+  max-width: 100%;
 }
+
 body {
   background-color: var(--bg-body);
   color: var(--text-primary);
@@ -100,9 +104,12 @@ body {
   transition:
     background-color 0.4s ease,
     color 0.4s ease;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  width: 100%;
+  max-width: 100%;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  position: relative;
 }
 
 h1 {
@@ -590,7 +597,7 @@ h4,
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.2) 0%,
-    rgba(0, 0, 0, 0.85) 100%
+    rgba(0, 0, 0, 0.65) 100%
   );
   z-index: 2;
   pointer-events: none;
@@ -2128,25 +2135,7 @@ h4,
   -webkit-text-fill-color: transparent;
 }
 
-/* =========================================
-   HERO SECTION - CINEMATIC MINIMAL (LUXURY)
-   ========================================= */
 
-/* =========================================
-   HERO SECTION - CINEMATIC MINIMAL (LUXURY)
-   ========================================= */
-
-/* =========================================
-   HERO SECTION - CINEMATIC MINIMAL (LUXURY)
-   ========================================= */
-
-/* =========================================
-   HERO SECTION - CINEMATIC MINIMAL (LUXURY)
-   ========================================= */
-
-/* =========================================
-   HERO SECTION - CINEMATIC MINIMAL (LUXURY)
-   ========================================= */
 
 /* =========================================
    HERO SECTION - CINEMATIC MINIMAL (LUXURY)
@@ -2154,38 +2143,49 @@ h4,
 
 /* Hero Specific Variables */
 :root {
-    /* Light Mode: 100% Sharp, Minimal Overlay */
-    --hero-overlay-light: rgba(255, 255, 255, 0);
-    --hero-overlay-dark: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.85) 100%);
+    /* ULTRA CINEMATIC Dark Overlay - Rich Dramatic Depth */
+    /* Soft radial vignette + Strong vertical gradient */
+    --hero-overlay-light: 
+        radial-gradient(ellipse at center, rgba(39, 38, 38, 0.438) 0%, rgba(0, 0, 0, 0.527) 100%),
+        linear-gradient(to bottom, rgba(97, 95, 95, 0.103) 0%, rgba(0, 0, 0, 0.555) 50%, rgba(0, 0, 0, 0.568) 100%);
+    
+    --hero-overlay-dark: 
+        radial-gradient(ellipse at center, rgba(65, 65, 65, 0.096) 0%, rgba(0,0,0,0.80) 100%),
+        linear-gradient(to bottom, rgba(92, 90, 90, 0.068) 0%, rgba(0,0,0,0.75) 50%, rgba(0,0,0,0.85) 100%);
     
     /* Text */
-    --hero-text-light: #000;
+    --hero-text-light: #ffffff;
     --hero-text-dark: #fff;
     
-    /* Glass Card Variables - ULTRA CLEAR */
-    --glass-bg-light: rgba(255, 255, 255, 0.1); /* Reduced to 10% for crystal clear look */
-    --glass-bg-dark: rgba(0, 0, 0, 0.3);
+    /* iOS Liquid Droplet Glass Variables */
+    --glass-bg-light: rgba(0, 0, 0, 0.116); /* Slightly more visible for liquid effect */
+    --glass-bg-dark: rgba(0, 0, 0, 0.014);
     
-    /* Theme Specific Blur */
-    --glass-blur-light: 8px;  /* Reduced blur for sharpness */
-    --glass-blur-dark: 12px;
+    /* Premium Blur - Balanced */
+    --glass-blur-light: 7px;  /* Smooth liquid blur */
+    --glass-blur-dark: 14px;
     
-    --glass-border-light: rgba(255, 255, 255, 0.5);
-    --glass-border-dark: rgba(255, 255, 255, 0.1);
-    --glass-shadow-light: 0 15px 35px rgba(0, 0, 0, 0.05);
-    --glass-shadow-dark: 0 20px 50px rgba(0, 0, 0, 0.5);
+    /* Liquid Droplet Borders */
+    --glass-border-light: rgba(255, 255, 255, 0.295);
+    --glass-border-dark: rgba(255, 255, 255, 0.15);
+    
+    /* Floating Shadows */
+    --glass-shadow-light: 0 20px 60px rgba(0, 0, 0, 0.15), 0 8px 20px rgba(0, 0, 0, 0.08);
+    --glass-shadow-dark: 0 25px 70px rgba(0, 0, 0, 0.6), 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 .hero-cinematic-wrapper {
     position: relative;
     width: 100%;
-    height: 100vh;
-    min-height: 700px;
+    max-width: 100%;
+    min-height: 100vh; /* Changed from height to min-height */
+    height: auto;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #000;
+    padding: 20px 0; /* Add padding for mobile */
 }
 
 /* 1. Full Immersive Background Slider */
@@ -2209,12 +2209,14 @@ h4,
 
 .bg-img {
     width: 100%;
+    max-width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     transform: scale(1);
     transition: transform 10s ease-in-out;
-    filter: none !important; 
+    filter: none !important;
 }
 
 /* Breathing Effect */
@@ -2228,7 +2230,7 @@ h4,
     .bg-img.mobile { display: block; }
 }
 
-/* 2. Theme Adaptive Overlay */
+/* 2. Cinematic Dark Overlay - Separate Layer */
 .hero-overlay-cinematic {
     position: absolute;
     inset: 0;
@@ -2237,18 +2239,19 @@ h4,
     transition: background 0.5s ease;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
+    pointer-events: none;
 }
 
 [data-theme="dark"] .hero-overlay-cinematic {
     background: var(--hero-overlay-dark);
 }
 
-/* 3. Liquid Glass Droplet Card (Fixed & Ultra Clear) */
+/* 3. ULTRA PREMIUM iOS Liquid Droplet Glass - MOBILE FIRST */
 .hero-content-center {
-    /* FIXED DIMENSIONS */
+    /* MOBILE FIRST - Base styles for mobile */
     width: 90%;
-    max-width: 900px;
-    min-height: 480px;
+    max-width: 100%;
+    min-height: 400px;
     height: auto;
     
     position: relative;
@@ -2260,22 +2263,64 @@ h4,
     justify-content: center;
     align-items: center;
     
-    /* Spacing */
-    padding: 40px;
-    margin-top: 15vh;
+    /* Spacing - Mobile first with bottom margin for indicators */
+    padding: 30px 20px;
+    margin-top: 80px;
+    margin-bottom: 35px;
     
-    /* Liquid Glass Style */
+    /* iOS Liquid Droplet Style - Mobile optimized */
     background: var(--glass-bg-light);
-    backdrop-filter: blur(var(--glass-blur-light)) saturate(180%);
-    -webkit-backdrop-filter: blur(var(--glass-blur-light)) saturate(180%);
-    border-radius: 40px;
-    border: 1px solid var(--glass-border-light);
-    box-shadow: var(--glass-shadow-light), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px) saturate(170%);
+    -webkit-backdrop-filter: blur(8px) saturate(170%);
+    border-radius: 35px; /* More curved for droplet effect */
+    border: 1.5px solid var(--glass-border-light);
     
-    /* Animations */
-    overflow: hidden; 
+    /* Liquid Droplet Shadows - Floating effect */
+    box-shadow: 
+        var(--glass-shadow-light),
+        inset 0 1px 2px rgba(255, 255, 255, 0.5),  /* Top inner highlight */
+        inset 0 -1px 2px rgba(0, 0, 0, 0.05);       /* Bottom inner shadow */
+    
+    /* Smooth transitions */
+    overflow: hidden;
     transition: all 0.5s ease;
-    animation: gentleFloat 6s ease-in-out infinite;
+}
+
+/* iOS Liquid Top Highlight - Light hitting water surface */
+.hero-content-center::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 40%;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.15) 0%,
+        rgba(255, 255, 255, 0.05) 50%,
+        transparent 100%
+    );
+    border-radius: 35px 35px 0 0;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+/* Tablet and up - Enhanced liquid effect */
+@media (min-width: 768px) {
+    .hero-content-center {
+        max-width: 900px;
+        min-height: 480px;
+        padding: 40px;
+        margin-top: 15vh;
+        border-radius: 45px; /* More curved on desktop */
+        backdrop-filter: blur(var(--glass-blur-light)) saturate(180%);
+        -webkit-backdrop-filter: blur(var(--glass-blur-light)) saturate(180%);
+        animation: gentleFloat 6s ease-in-out infinite;
+    }
+    
+    .hero-content-center::after {
+        border-radius: 45px 45px 0 0;
+    }
 }
 
 [data-theme="dark"] .hero-content-center {
@@ -2283,7 +2328,22 @@ h4,
     backdrop-filter: blur(var(--glass-blur-dark)) saturate(180%);
     -webkit-backdrop-filter: blur(var(--glass-blur-dark)) saturate(180%);
     border-color: var(--glass-border-dark);
-    box-shadow: var(--glass-shadow-dark), inset 0 0 10px rgba(255, 255, 255, 0.05);
+    
+    /* Dark mode liquid shadows */
+    box-shadow: 
+        var(--glass-shadow-dark),
+        inset 0 1px 2px rgba(255, 255, 255, 0.1),   /* Subtle top highlight */
+        inset 0 -1px 2px rgba(0, 0, 0, 0.3);         /* Bottom depth */
+}
+
+[data-theme="dark"] .hero-content-center::after {
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.08) 0%,
+        rgba(255, 255, 255, 0.03) 50%,
+        transparent 100%
+    );
+    opacity: 0.6;
 }
 
 @keyframes gentleFloat {
@@ -2363,16 +2423,29 @@ h4,
     pointer-events: auto;
 }
 
-/* Updated Typography Sizes */
+/* Updated Typography Sizes - MOBILE FIRST */
 .hero-title-cinematic {
-    font-size: clamp(2rem, 4vw, 3rem); /* Smaller, elegant sizing */
+    /* Mobile first - smaller sizes */
+    font-size: 1.8rem;
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1.2;
     letter-spacing: -0.02em;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     color: var(--hero-text-light);
-    position: relative;
-    display: inline-block;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+    .hero-title-cinematic {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin-bottom: 15px;
+    }
+}
+
+[data-theme="dark"] .hero-title-cinematic {
+    color: var(--hero-text-dark);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 
 /* Elegant Accent Line */
@@ -2396,33 +2469,84 @@ h4,
     color: var(--hero-text-dark);
 }
 
+.hero-subtitle-cinematic {
+    /* Mobile first */
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.85;
+    max-width: 100%;
+    color: var(--hero-text-light);
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+    .hero-subtitle-cinematic {
+        font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+        max-width: 600px;
+        padding: 0;
+    }
+}
+
+[data-theme="dark"] .hero-subtitle-cinematic {
+    color: var(--hero-text-dark);
+}
+
 .hero-sub-cinematic {
-    font-size: clamp(1rem, 1.2vw, 1.2rem); /* Reduced size */
+    /* Mobile first */
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.6;
     color: var(--hero-text-light);
     opacity: 0.9;
-    max-width: 650px;
+    max-width: 100%;
     margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+    .hero-sub-cinematic {
+        font-size: clamp(1rem, 1.2vw, 1.2rem);
+        max-width: 650px;
+        padding: 0;
+    }
 }
 
 [data-theme="dark"] .hero-sub-cinematic {
     color: var(--hero-text-dark);
 }
 
-/* 4. Cinematic Buttons */
+/* 4. Cinematic Buttons - MOBILE FIRST */
 .btn-cinematic-primary {
-    display: inline-flex;
-    padding: 18px 45px;
+    /* Mobile first - full width */
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 30px;
     border-radius: 50px;
-    background: linear-gradient(135deg, #0056b3, #4a00e0); /* Deep royal gradient */
+    background: linear-gradient(135deg, #0056b3, #4a00e0);
     color: white;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.95rem;
     letter-spacing: 0.5px;
     text-decoration: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+    .btn-cinematic-primary {
+        display: inline-flex;
+        width: auto;
+        padding: 18px 45px;
+        font-size: 1rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
 }
 
 .btn-cinematic-primary:hover {
@@ -2433,16 +2557,31 @@ h4,
 }
 
 .btn-cinematic-secondary {
-    display: inline-flex;
-    padding: 18px 45px;
+    /* Mobile first - full width */
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 30px;
     border-radius: 50px;
     background: transparent;
-    border: 1px solid rgba(0,0,0,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     color: var(--hero-text-light);
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.95rem;
     text-decoration: none;
     transition: all 0.3s ease;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+    .btn-cinematic-secondary {
+        display: inline-flex;
+        width: auto;
+        padding: 18px 45px;
+        font-size: 1rem;
+    }
 }
 
 [data-theme="dark"] .btn-cinematic-secondary {
@@ -2460,15 +2599,22 @@ h4,
     border-color: #fff;
 }
 
-/* 5. Minimal Indicators */
+/* 5. Minimal Indicators - Fixed positioning to prevent overlap */
 .hero-cinematic-indicators {
     position: absolute;
-    bottom: 50px;
+    bottom: 20px; /* Reduced from 50px for mobile */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 15px;
-    z-index: 10;
+    z-index: 5; /* Below glass box (z-index: 10) */
+}
+
+/* Tablet and up - more spacing */
+@media (min-width: 768px) {
+    .hero-cinematic-indicators {
+        bottom: 40px;
+    }
 }
 
 .c-indicator {
